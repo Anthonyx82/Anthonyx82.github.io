@@ -117,9 +117,6 @@ b, strong {
 
 .animated-item {
   color: #ffc200;
-}
-
-.animated-item {
   font-size: 38px;
   line-height: inherit;
   display: block;
@@ -129,13 +126,30 @@ b, strong {
   top: 0;
   right: 0;
   left: 0;
-  animation: BottomTotop 6s linear infinite 0s;
 }
-.animated-item:nth-child(2n+2) {
-  animation-delay: 2s;
+
+.animated-item:nth-child(1) {
+  animation: BottomTotop 12s linear infinite 0s;
 }
-.animated-item:nth-child(3n+3) {
-  animation-delay: 4s;
+
+.animated-item:nth-child(2) {
+  animation: BottomTotop 12s linear infinite 2s;
+}
+
+.animated-item:nth-child(3) {
+  animation: BottomTotop 12s linear infinite 4s;
+}
+
+.animated-item:nth-child(4) {
+  animation: BottomTotop 12s linear infinite 6s;
+}
+
+.animated-item:nth-child(5) {
+  animation: BottomTotop 12s linear infinite 8s;
+}
+
+.animated-item:nth-child(6) {
+  animation: BottomTotop 12s linear infinite 10s;
 }
 
 @keyframes BottomTotop {
@@ -165,6 +179,7 @@ b, strong {
     opacity: 0;
   }
 }
+
 .navbar {
   position: fixed;
   top: 0;
