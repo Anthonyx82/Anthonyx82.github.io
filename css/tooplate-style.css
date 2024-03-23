@@ -111,7 +111,7 @@ b, strong {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
-  min-width: 260px;
+  min-width: 348px;
   position: relative;
 }
 
@@ -398,11 +398,11 @@ b, strong {
 }
 .owl-carousel .owl-nav .owl-prev:before {
   content: '\e833';
-  left: -45px;
+  left: -60px;
 }
 .owl-carousel .owl-nav .owl-next:before {
   content: '\e836';
-  right: -45px;
+  right: -60px;
 }
 
 .owl-theme .owl-nav [class*=owl-] {
