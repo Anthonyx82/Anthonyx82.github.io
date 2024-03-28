@@ -3,10 +3,23 @@
   "use strict";
 
     // COLOR MODE
-    $('.color-mode').click(function(){
-        $('.color-mode-icon').toggleClass('active')
-        $('body').toggleClass('dark-mode')
-    })
+    $(document).ready(function() {
+      
+      var colorMode = localStorage.getItem('colorMode');
+  
+      if (colorMode === 'dark') {
+          $('body').addClass('dark-mode');
+          $('.color-mode-icon').addClass('active');
+      }
+
+      $('.color-mode').click(function() {
+          $('.color-mode-icon').toggleClass('active');
+          $('body').toggleClass('dark-mode');
+  
+          var currentMode = $('body').hasClass('dark-mode') ? 'dark' : 'light';
+          localStorage.setItem('colorMode', currentMode);
+      });
+  });
 
     // HEADER
     $(".navbar").headroom();
