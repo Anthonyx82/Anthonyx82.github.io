@@ -227,6 +227,11 @@ b, strong {
   transform: translate3d(0, 0, 0);
 }
 
+.navbar-collapse{
+  background: #ffffff;
+  font-weight: bold;
+}
+
 .navbar-light .navbar-nav .nav-link:focus,
 .navbar-light .navbar-nav .nav-link:hover {
   color: #ffc200;
@@ -281,6 +286,7 @@ b, strong {
   display: block;
 }
 
+/*No es*/
 .color-mode {
   font-weight: bold;
   cursor: pointer;
@@ -292,9 +298,7 @@ b, strong {
 }
 
 .color-mode-icon:after {
-  position: absolute;
-  transform: translateY(-20%);
-  left: 20px;
+  position: relative;
   font-family: 'unicons';
   content: '\ea9f';
   font-size: 30px;
@@ -326,6 +330,13 @@ b, strong {
   background: #0d0c15;
   color: #ffffff;
 }
+
+.dark-mode .navbar-collapse{
+  background: #0c0c0d;
+  color: rgba(255, 255, 255, 0.8);
+  color: #ffc200;
+}
+
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
@@ -552,10 +563,6 @@ b, strong {
     padding-bottom: 4rem;
   }
 
-  .color-mode {
-    display: none;
-  }
-
   .about-image {
     margin-top: 4em;
   }
@@ -583,8 +590,8 @@ b, strong {
   }
 
   .navbar-collapse {
-    background: #ffffff;
     text-align: center;
+    align-content: center;
     padding-bottom: 20px;
   }
 
