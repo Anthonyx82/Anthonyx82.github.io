@@ -288,15 +288,20 @@ b, strong {
 
 .color-mode-icon {
   position: relative;
-  right: 6px;
+  height: 100%;
 }
+
 .color-mode-icon:after {
+  position: absolute;
+  transform: translateY(-20%);
+  left: 20px;
   font-family: 'unicons';
   content: '\ea9f';
   font-size: 30px;
   font-weight: 300;
   font-style: normal;
 }
+
 .color-mode-icon.active:after {
   font-family: 'unicons';
   content: '\eb65';
