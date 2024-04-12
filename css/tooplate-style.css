@@ -628,6 +628,15 @@ b, strong {
 }
 
 @media (max-width: 450px) {
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
   .animated-text {
     margin-top: 0;
   }
