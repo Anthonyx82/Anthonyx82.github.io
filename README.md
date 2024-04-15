@@ -24,7 +24,7 @@ Este proyecto consiste en un curriculum web donde se desarrollan y se desarrolla
 ### Requisitos de los proyectos supabase-react y docker
 
 - Cuenta en supabase ✅
-- Servidor de despliegue para proyectos (github pages) ✅
+- Servidor de despliegue para proyectos ❌
 - IDE visual studio y control de versiones github ✅
 - Servidor donde alojar docker ✅
 
