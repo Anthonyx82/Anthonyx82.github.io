@@ -4,7 +4,7 @@
 
 Este proyecto consiste en un curriculum web donde se desarrollan y se desarrollaran todos aquellos proyectos, aptitudes, conocimientos, experiencias, etc... desarrollados a lo largo de mi vida laboral en general, y haciendo hincapié en varios proyectos desarrollados de ciberseguridad, programacion, hardware y redes
 
-## Fechas y plazos
+### Plazos proyectos supabase-react y docker
 
 - 12 de abril al 20 de abril:
   - Estudio de supabase ✅
@@ -21,15 +21,12 @@ Este proyecto consiste en un curriculum web donde se desarrollan y se desarrolla
 - 5 de mayo al 10 de mayo: Subida de documentacion/tutorial de las tecnologias de proyecto docker
 - 10 de mayo hasta dia fianl del proyecto: memoria completa del proyecto y integracion de alguna otra documentcacion/tutorial de tecnologias segun tiempos
 
-## Requisitos del proyecto
+### Requisitos de los proyectos supabase-react y docker
 
-- Cuenta en supabase y setup de proyecto ✅
-- Setup de proyecto React ✅
-- Desarrollo de proyecto React ✅
+- Cuenta en supabase ✅
 - Servidor de despliegue para proyectos (github pages) ✅
 - IDE visual studio y control de versiones github ✅
-- Investigancion en tecnologias que se van a documentar (en proceso) ❌
--
+- Servidor donde alojar docker ✅
 
 ### Imagenes
 
