@@ -34,3 +34,5 @@ Este proyecto consiste en un curriculum web donde se desarrollan y se desarrolla
 ### Imagenes
 
 80 radio 50 margen
+
+## Autor
