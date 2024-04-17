@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Antonio Martin Sosa</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/unicons.css">
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="../../../css/tooplate-style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
+                                Mi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#project" class="nav-link"><span
+                                data-hover="Projects">Proyectos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#resume" class="nav-link"><span
+                                data-hover="Resume">Resumen</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#contact" class="nav-link"><span
+                                data-hover="Contact">Contactar</span></a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <div class="color-mode">
+                        <i class="color-mode-icon"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 mx-auto">
+                    <div class="text-center">
+                        <h2 class="mb-4">Self-hosting Supabase</h2>
+                    </div>
+                    <p class="lead text-muted text-justify">
+                        Como ya hemos indicado supabase es de codigo abierto por lo que cualquiera puede descargar el
+                        codigo y correrlo en su equipo de forma autonoma. Esto es lo que vamos a hacer y es algo muy
+                        simple.
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>Paso 1: </strong> Vamos a clonar el repositorio de git de supabase y vamos a traer todas
+                        las imagenes de docker hub
+                        <br>
+                        <code>
+                            #Clonar<br>
+                            git clone --depth 1 https://github.com/supabase/supabase<br><br>
+                            
+                            #Ir al codigo<br>
+                            cd supabase/docker<br><br>
+                            
+                            #Copiamos la config por defecto<br>
+                            cp .env.example .env<br><br>
+                            
+                            #Traemos imagenes de docker<br>
+                            docker compose pull<br><br>
+                            
+                            #Arrancamos los contenedores<br>
+                            docker compose up -d<br>
+                        </code>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>Paso 2: </strong> Ahora nos conectaremos utilizando cualquier navegador a la direccion
+                        del dashboard que por defecto es: <code>http://localhost:8000</code> y con el
+                        ususario-contraseña por defecto
+                    <ul class="lead text-muted text-justify">
+                        <li>Username: <code>supabase</code></li>
+                        <li>Password: <code>this_password_is_insecure_and_should_be_updated</code></li>
+                    </ul>
+                    <br>
+                    <div style="text-align: center;">
+                        <img src="../../../images/project/supabseReact/0.1.jpg" alt="Captura de pantalla paso 1"
+                            style="max-width: 100%; height: auto; display: inline-block;">
+                    </div>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>Paso 3: </strong> Ahora mismo ya tendremos acceso a nuestro propio supabase pero vamos a
+                        cambiar la contraseña para no usar la contraseña por defecto ya que es insegura. Para ello,
+                        tenemos que editar el archivo .env que anterior mente hemos usado en el paso 1 y cambiar los
+                        valores
+                    <ul class="lead text-muted text-justify">
+                        <li><code>DASHBOARD_USERNAME: </code></li>
+                        <li><code>DASHBOARD_PASSWORD: </code></li>
+                    </ul><br>
+                    <p class="lead text-muted text-justify">
+                        Una vez cambiada la contraseña, reiniciamos todos los contenedores de supabase y hemos terminado
+                        <br>
+                        <br>
+                        <code>
+                            # Parar y borrar contenedores<br>
+                            docker compose down<br>
+
+                            # Recrear y encender contenedores<br>
+                            docker compose up -d<br>
+                        </code>
+                    </p>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>IMPORTANTE: </strong>Normalmente siempre se recomienda leer la documentacion oficial
+                        este caso no es que se recomiendo sino que es practicamente obligatorio devido a la buenisima
+                        claridad y sencillez de la documentacion de supabase, <a target="_blank"
+                            rel="noopener noreferrer" href="https://supabase.com/docs/guides/self-hosting"> pulsa
+                            aqui</a> y podras ver la documentacion sobre como puedes autohostear supabase
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Curriculum diseñado y producido por Antonio Martin Sosa 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/Headroom.js"></script>
+    <script src="../../../js/jQuery.headroom.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/smoothscroll.js"></script>
+    <script src="../../../js/custom.js"></script>
+
+</body>
+
+</html>
