@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  nginx:
+    build: ./nginx
+    image: nginx
+    container_name: "nginx_cont"
+    ports:
+      - "10000:10000"
+    depends_on:
+      - django_app
+  
+  django_app:
+    image: django_app
+    build: 
+      context: .
+    container_name: "django_cont"
+    ports:
+      - "10001:10001"
+    command: gunicorn mysite.wsgi --bind 0.0.0.0:10001
+    env_file:
+      - "./mysite/.env"
+    depends_on:
+      - db
+
+  db:
+    image: mysql
+    container_name: "db_cont"
+    environment:
+      - MYSQL_ROOT_PASSWORD=server1313*
+      - MYSQL_DATABASE=mysiteDB

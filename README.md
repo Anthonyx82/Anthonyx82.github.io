@@ -12,8 +12,8 @@ Este proyecto consiste en un curriculum web donde se desarrollan y se desarrolla
   - Estudio de react ✅
   - Setup de proyecto en react ✅
   - Empezar a documentar el proceso ✅
-  - Inicio del desarrollo ❌
-- 20 de abril al 25 de abril: Desarrollo del lado de Supabse
+  - Inicio del desarrollo ✅
+- 20 de abril al 25 de abril: Desarrollo del lado de Supabse ✅
 - 25 de abril al 1 de mayo: Desarrollo del lado de React
 - 1 de mayo al 3 de mayo: Refactorizacion y despliegue del proyecto terminado
 - 3 de mayo al 5 de mayo: Subida de documentacion/tutorial de las tecnologias del proyecto supabase-react
