@@ -18,12 +18,6 @@ function Login() {
     }
   };
 
-  useEffect(() => {
-      if (supabase.auth.getUser()) {
-          navigate("/")
-      }
-  }, [])
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
