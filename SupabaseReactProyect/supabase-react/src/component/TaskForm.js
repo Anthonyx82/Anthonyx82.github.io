@@ -1,21 +1,13 @@
 import { useState } from "react";
-import { supabase } from "../supabase/client";
+import { useTasks } from "../context/TaskContext";
 
 function TaskForm() {
     const [taskName, setTaskName] = useState("")
+    const { createTask, adding } = useTasks()
 
-    const handleSubmit = async e => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        try {
-            const user = supabase.auth.getUser()
-            const result = await supabase.from("tasks").insert({
-                name: taskName,
-                userid: (await user).data.user.id,
-            })
-            console.log(result)
-        } catch (error) {
-            console.log(error)
-        }
+        createTask(taskName)
     }
 
     return (
@@ -25,8 +17,8 @@ function TaskForm() {
                     name="taskName"
                     placeholder="añade una tarea"
                     onChange={(e) => setTaskName(e.target.value)} />
-                <button>
-                    Guardar
+                <button disabled={adding}>
+                    {adding ? "Guardando..." : "Guardar"}
                 </button>
             </form>
         </div>
