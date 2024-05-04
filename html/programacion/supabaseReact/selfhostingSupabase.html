@@ -135,7 +135,8 @@
                     </p>
                     <p class="lead text-muted text-justify">
                         NOTA: tener en cuenta que antes de empezar a trabajar en nuestro proyecto tenemos que asignar
-                        un token de seguridad para la api y demas servicios, para ello vamos a editar el archivo .env que 
+                        un token de seguridad para la api y demas servicios, para ello vamos a editar el archivo .env
+                        que
                         hemos usado en el paso numero 3 y cambiaremos las siguientes variables:<br>
                         <br>
                         <code>
@@ -144,30 +145,43 @@
                             SERVICE_ROLE_KEY<br>
                         </code>
                         <br>
-                        El valor de estas variables va a ser el generado en la documentacion oficial donde explican como 
-                        <a target="_blank" rel="noopener noreferrer" href="https://supabase.com/docs/guides/self-hosting/docker#securing-your-services"> 
-                        autohostear nuestro propio supabase</a> tendremos que escribir nosotros un JWT secreto y darle a generate JWT
-                        tanto para crear una anon key como una service key como esto es algo privado no puedo enseñarlo pero 
+                        El valor de estas variables va a ser el generado en la documentacion oficial donde explican como
+                        <a target="_blank" rel="noopener noreferrer"
+                            href="https://supabase.com/docs/guides/self-hosting/docker#securing-your-services">
+                            autohostear nuestro propio supabase</a> tendremos que escribir nosotros un JWT secreto y
+                        darle a generate JWT
+                        tanto para crear una anon key como una service key como esto es algo privado no puedo enseñarlo
+                        pero
                         siguiendo los pasos es muy sencillo conseguirlo
                         <br>
                         <br>
                         <img src="../../../images/project/supabseReact/0.2.jpg" alt="Captura de pantalla paso 2"
                             style="max-width: 100%; height: auto; display: inline-block;">
-                            <br>
-                            <br>
+                        <br>
+                        <br>
                         <img src="../../../images/project/supabseReact/0.3.jpg" alt="Captura de pantalla paso 2"
                             style="max-width: 100%; height: auto; display: inline-block;">
-                            <br>
-                            <br>
-                        Por ultimo reiniciamos el servidor con el comando indicado en el paso 3 y ya lo tenemos configurado
+                        <br>
+                        <br>
+                        Por ultimo reiniciamos el servidor con el comando indicado en el paso 3 y ya lo tenemos
+                        configurado
                     </p>
                     </p>
                     <p class="lead text-muted text-justify">
                         <strong>IMPORTANTE: </strong>Normalmente siempre se recomienda leer la documentacion oficial
                         este caso no es que se recomiende sino que es practicamente obligatorio devido a la buenisima
-                        claridad y sencillez de la documentacion de supabase, <a target="_blank"
-                            rel="noopener noreferrer" href="https://supabase.com/docs/guides/self-hosting"> pulsa
+                        claridad y sencillez de la documentacion de supabase, <a rel="noopener noreferrer"
+                            href="https://supabase.com/docs/guides/self-hosting"> pulsa
                             aqui</a> y podras ver la documentacion sobre como puedes autohostear supabase
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>NOTA: </strong>Supabase nos ofrece la posibilidad de enviar correos a nuestros usuarios
+                        por ejemplo correos de autenticacion como magic link o de confirmacion como 2fa, pero para que
+                        esto funcione necesitamos de un servidor smtp propio o externo y tambien disponer de un dns
+                        propio o externo, en cualquier caso dejo <a rel="noopener noreferrer"
+                            href="../../SysAdmin/SMTP&DNS/smtp&dns.html"> mas informacion
+                            aqui</a> ya que es interesante conocer esto si queremos que esta caracteristica de supabase
+                        funcione
                     </p>
                 </div>
             </div>
