@@ -13,8 +13,10 @@ export const TaskContextProvider = ({ children }) => {
 
     const [tasks, setTasks] = useState([]);
     const [adding, setAdding] = useState(false);
+    const [loading, setLoading] = useState(false)
 
     const getTasks = async (done = false) => {
+        setLoading(true)
         const user = supabase.auth.getUser()
         const { error, data } = await supabase
             .from("tasks")
@@ -26,30 +28,48 @@ export const TaskContextProvider = ({ children }) => {
         if (error) throw error
 
         setTasks(data)
+        setLoading(false)
     }
 
     const createTask = async (taskName) => {
         setAdding(true)
         try {
             const user = supabase.auth.getUser();
-            const {error, data} = await supabase.from("tasks").insert({
+            const { error, data } = await supabase.from("tasks").insert({
                 name: taskName,
                 userid: (await user).data.user.id,
             }).select()
-            
+
             if (error) throw error;
 
-            setTasks([ ...tasks, ...data])
+            setTasks([...tasks, ...data])
 
         } catch (error) {
             console.log(error)
         } finally {
             setAdding(false)
         }
-        
+
     }
 
-    return <TaskContext.Provider value={{ tasks, getTasks, createTask, adding }}>
+    const deleteTask = async (id) => {
+        const user = supabase.auth.getUser()
+
+        const { data, error } = await supabase.from('tasks')
+            .delete()
+            .eq("userid", (await user).data.user.id)
+            .eq("id", id)
+            .select()
+
+        if (error) throw error
+
+        setTasks(
+            tasks.filter(task => task.id != id)
+        )
+
+    }
+
+    return <TaskContext.Provider value={{ tasks, getTasks, createTask, adding, loading, deleteTask }}>
         {children}
     </TaskContext.Provider>
 }
