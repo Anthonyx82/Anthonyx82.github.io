@@ -19,16 +19,19 @@ function Login() {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="tuemail@email.com"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button>send</button>
-      </form>
+    <div className="row pt-4">
+      <div className="col-md-4 offset-md-4">
+        <form onSubmit={handleSubmit} className="card card-body">
+          <input
+            type="email"
+            name="email"
+            placeholder="tuemail@email.com"
+            onChange={(e) => setEmail(e.target.value)}
+            className="form-control mb-2"
+          />
+          <button className="btn btn-primary">send</button>
+        </form>
+      </div>
     </div>
   );
 }

@@ -2,25 +2,26 @@ import { useTasks } from "../context/TaskContext"
 
 function TaskCard({ task }) {
 
-    const {deleteTask} = useTasks()
+    const { deleteTask, updateTask } = useTasks()
 
     const handleDelete = () => {
         deleteTask(task.id)
     }
 
     const handleToggleDone = () => {
-        alert('Completando')
+        updateTask(task.id, { done: !task.done })
     }
     return (
-        <div>
-            <h1>{task.name}</h1>
-            <p>{JSON.stringify(task.done)}</p>
-            <div>
-                <button onClick={() => handleDelete()}>
+        <div className="card card-body">
+            <h1 className="h5">
+                {`${task.id}. ${task.name} ${task.done ? "✅" : "❌"}`}
+            </h1>
+            <div className="ms-auto">
+                <button className="btn btn-danger btn-sm me-1" onClick={() => handleDelete()}>
                     Borrar
                 </button>
-                <button onClick={() => handleToggleDone()}>
-                    Completado
+                <button className="btn btn-secondary btn-sm" onClick={() => handleToggleDone()}>
+                    {`${task.done ? "Pendiente" : "Completado"}`}
                 </button>
             </div>
         </div>
