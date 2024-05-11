@@ -84,9 +84,54 @@
                         <h2 class="mb-4">Desarrollo de supabase</h2>
                     </div>
                     <p class="lead text-muted text-justify">
-                        A la hora de desarrollar con supabase tenemos que conocer como funciona su libreria (En este
-                        caso para react), en funcion de que framework de js estes utilizando tendras que ver su documentacion
-                        correspondiente
+                        A la hora de desarrollar con supabase tenemos que conocer como funciona su <a
+                            href="https://github.com/supabase/supabase-js">libreria</a> (En este
+                        caso para javascript), en funcion de lenguaje de programacion estes utilizando tendras que usar
+                        la que corresponda
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        La librería de Supabase tiene que ser capaz de gestionar todo un backend con lo que conlleva
+                        (base de datos, autenticación del usuario, lógica, etc.). Para hacer todo esto, utiliza:
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><a href="https://www.postgresql.org/">PostgreSQL</a> como base de datos relacional.
+                            PostgreSQL es una base de datos de código abierto y altamente potente y escalable.</li>
+                        <li>Realtime Postgres. Supabase utiliza la funcionalidad de notificaciones de PostgreSQL para
+                            proporcionar actualizaciones en tiempo real a través de WebSockets.</li>
+                        <li><a href="https://postgrest.org/">PostgREST</a> como capa de API REST. PostgREST es una
+                            herramienta que genera una API RESTful sobre una base de datos PostgreSQL, lo que permite
+                            interactuar con la base de datos utilizando peticiones HTTP.</li>
+                        <li>Auth. Supabase utiliza un sistema de autenticación basado en JWT (<a
+                                href="https://jwt.io/">JSON Web Tokens</a>) para autenticar usuarios y gestionar
+                            sesiones de usuario de forma segura.</li>
+                        <li>Storage. Supabase proporciona un servicio de almacenamiento de archivos, que utiliza
+                            almacenamiento en la nube (como <a href="https://aws.amazon.com/s3/">AWS S3</a>) para
+                            almacenar los archivos de los usuarios.</li>
+                        <li><a href="https://graphql.org/">GraphQL</a>. Supabase ofrece soporte para GraphQL, lo que
+                            permite a los desarrolladores consultar y manipular los datos utilizando un lenguaje de
+                            consulta flexible y poderoso.</li>
+                        <li>WebSockets. Supabase utiliza WebSockets para proporcionar funcionalidades en tiempo real,
+                            como notificaciones y actualizaciones automáticas de datos.</li>
+                    </ul>
+                    <p class="lead text-muted text-justify">
+                        Gracias a estas tecnologias supabase nos proporciana funciones de autenticación del usuario como
+                        puede ser <code> supabase.auth.getUser() </code>la cual nos da en JSON toda la informacion
+                        acerca del usuario que esta autenticado o <code> supabase.auth.signOut() </code> que nos permite
+                        deslogear al usuario en cualquier contexto
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Tambien podemos utilizar <code> supabase.from("tabla") </code> que nos permite seleccionar
+                        cualquier tabla de la base de datos para poder hacer operaciones crud en ella
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><code> supabase.from("tabla").insert() </code></li>
+                        <li><code> supabase.from("tabla").update() </code></li>
+                        <li><code> supabase.from("tabla").delete() </code></li>
+                        <li><code> supabase.from("tabla").select() </code></li>
+                    </ul>
+                    <p class="lead text-muted text-justify">
+                        Por supuesto que podemos hacer comprobaciones a lo hora de hacer update, delete o select
+                        utilizando la funcion <code>.eq()</code>
                     </p>
                 </div>
             </div>
