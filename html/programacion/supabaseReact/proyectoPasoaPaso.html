@@ -129,9 +129,35 @@
                         <li><code> supabase.from("tabla").delete() </code></li>
                         <li><code> supabase.from("tabla").select() </code></li>
                     </ul>
+                    <br>
                     <p class="lead text-muted text-justify">
                         Por supuesto que podemos hacer comprobaciones a lo hora de hacer update, delete o select
                         utilizando la funcion <code>.eq()</code>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Y el resultado de la operacion la podemos recojer añadiendo la funcion <code> .select() </code>
+                        al final de la sentencia. Por ejemplo para añadir una tarea en nuestro proyecto y recojer el
+                        resultado de la operacion haremos lo siguiente:
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><code>const user = supabase.auth.getUser(); </code></li>
+                        <li><code> const { error, data } = await supabase.from("tasks").insert({
+                            name: taskName, 
+                            userid: (await user).data.user.id,
+                        }).select() </code></li>
+                    </ul>
+                    <br>
+                    <p class="lead text-muted text-justify">
+                        Como podemos ver se recoje el usuario para hacer el insert de la tarea con su usuario insertado,
+                        y hacemos el insert dentro de la tabla "tasks", y para recojer el resultado y guardar el
+                        <code>{data, error}</code> de este utilizamos la sentencia <code> .select() </code> al
+                        final
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        De esta forma ya sabemos como podemos hacer cualquier operacion realacionada con la base de
+                        datos y con la autenticacion del ususario, si quieres saber mas informacion puedes encontrar
+                        cualquier cosa sobre supabase en su <a href="https://supabase.com/docs">documentacion</a> que
+                        esta muy bien explicada y te sera muy sencillo encontrarlo
                     </p>
                 </div>
             </div>
