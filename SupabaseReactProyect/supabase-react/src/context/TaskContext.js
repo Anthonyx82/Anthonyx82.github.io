@@ -31,40 +31,57 @@ export const TaskContextProvider = ({ children }) => {
         setLoading(false)
     }
 
-    const createTask = async (taskName) => {
-        setAdding(true)
+    const createTask = async (taskName, image) => {
+        setAdding(true);
         try {
             const user = supabase.auth.getUser();
-            const { error, data } = await supabase.from("tasks").insert({
+            let taskData = {
                 name: taskName,
                 userid: (await user).data.user.id,
-            }).select()
+            };
+
+            if (image) {
+                const { data, error } = await supabase.storage
+                    .from("tasks")
+                    .upload(`task_images/${image.name}`, image);
+
+                if (error) throw error;
+
+                taskData.image_url = data.path;
+            }
+
+            const { error, data } = await supabase.from("tasks").insert(taskData).select();
 
             if (error) throw error;
 
-            setTasks([...tasks, ...data])
-
+            setTasks([...tasks, ...data]);
         } catch (error) {
-            console.log(error)
+            console.log(error);
         } finally {
-            setAdding(false)
+            setAdding(false);
         }
-
     }
 
-    const deleteTask = async (id) => {
+    const deleteTask = async (task) => {
         const user = supabase.auth.getUser()
 
-        const { data, error } = await supabase.from("tasks")
+        const { errorIMG } = await supabase
+            .storage
+            .from('tasks')
+            .remove([task.image_url])
+
+        if (errorIMG) throw error
+
+        const { error } = await supabase.from("tasks")
             .delete()
             .eq("userid", (await user).data.user.id)
-            .eq("id", id)
+            .eq("id", task.id)
             .select()
 
         if (error) throw error
 
         setTasks(
-            tasks.filter(task => task.id != id)
+            tasks.filter(task => task.id != task.id)
         )
 
     }
