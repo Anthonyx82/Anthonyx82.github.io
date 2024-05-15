@@ -87,8 +87,8 @@
                         Gracias a esto podemos crear aplicaciones web sin necesidad de un backend y tan solo con un
                         frontend. Esto sistema fue desarrollado por primera vez en 2011 por <a
                             href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a>
-                        cumpliendo la misma funcion pero siendo de pago y privativo, todo lo contrario a supabase que es
-                        gratuito y de codigo abierto.
+                        cumpliendo la misma funcion pero siendo de pago y privativo, todo lo contrario a supabase que
+                        esde codigo abierto (aunque ambas ofrecen versiones de pago y gratuitas mas simples).
                     </p>
                     <div class="text-center">
                         <h2 class="mb-4">React</h2>
@@ -108,13 +108,13 @@
                         interfaz de usuario, lo quefacilita la creación y mantenimiento de aplicaciones complejas.
                     </p>
                     <div class="text-center">
-                        <h2 class="mb-4">Supabase y React 🤝</h2>
+                        <h2 id="SetupProyecto" class="mb-4">Supabase y React 🤝</h2>
                     </div>
                     <p class="lead text-muted text-justify">
                         Lo que vamos a hacer es utilizar supabase para tener un backend que vamos a poder utilziar con
                         un frontend en react. Recuerda que podemos usar supabase autohosteandolo nosotros
                         mismos o desde la pagina web oficial dependiendo de los servidores de supabase, en mi caso lo
-                        autohosteare pero si tu no quieres hacerlo el proceso es el mismo solo que nos ahorramos la
+                        autohosteare pero si tu no quieres hacerlo el proceso es el mismo solo que nos ahorramos esta
                         parte.
                         Si te interesa saber como autohostearlo aqui te dejo <a href="selfhostingSupabase.html"
                             target="_blank" rel="noopener noreferrer"> mas informacion </a>
@@ -149,9 +149,13 @@
                     <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/3.jpg" alt="Captura de pantalla paso 3"
                             style="max-width: 100%; height: auto; display: inline-block;">
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/3.1.jpg" alt="Captura de pantalla paso 3-1"
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
+
                     </p>
                     <p class="lead text-muted text-justify">
                         <strong>Paso 4: </strong> No necesitamos crear una tabla de usuario porque de eso ya se encarga
@@ -162,15 +166,38 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 5: </strong> Vamos a crear el proyecto con el comando:
-                        <code>npx create-react-app Supabase-React</code>
-                    <div style="text-align: center; display: inline-block;">
+                        <strong>Paso 5: </strong> Vamos a crear ahora un bucket donde vamos a almacenar los archivos y
+                        dentro crearemos una carpeta para guardar hay los archivos, en este caso solo permitiremos que
+                        solo se puedan subir imagenes de cualquier tipo
+                    <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/5.jpg" alt="Captura de pantalla paso 5"
+                            style="max-width: 100%; height: auto;">
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <img src="../../../images/project/supabseReact/6.jpg" alt="Captura de pantalla paso 5"
                             style="max-width: 100%; height: auto;">
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 6: </strong> Añadiremos la <a href="https://github.com/supabase/supabase-js"
+                        <strong>Paso 6: </strong> Agregamos los permisos necesarios al bucket para que todo funcione sin
+                        problemas, y solo los usuarios autenticados podras acceder al bucket
+                    <div style="text-align: center;">
+                        <img src="../../../images/project/supabseReact/7.jpg" alt="Captura de pantalla paso 5"
+                            style="max-width: 100%; height: auto;">
+                    </div>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>Paso 7: </strong> Con esto ya terminamos el setup por supabase asi que vamos a crear el
+                        proyecto de react con el comando:
+                        <code>npx create-react-app Supabase-React</code>
+                    <div style="text-align: center;">
+                        <img src="../../../images/project/supabseReact/8.jpg" alt="Captura de pantalla paso 5"
+                            style="max-width: 100%; height: auto;">
+                    </div>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        <strong>Paso 8: </strong> Añadiremos la <a href="https://github.com/supabase/supabase-js"
                             target="_blank" rel="noopener noreferrer">libreria de supabase</a> a nuestro proyecto
                     <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/6.png" alt="Captura de pantalla paso 6"
@@ -178,7 +205,7 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 7: </strong> Vamos a borrar todos los archivos de la carpeta src para quedarnos
+                        <strong>Paso 9: </strong> Vamos a borrar todos los archivos de la carpeta src para quedarnos
                         solo
                         con lo que se ven en la captura, ya que estos son archivos predeterminados que no nos hacen
                         falta,
@@ -189,7 +216,7 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 8: </strong> Vamos a crear una carpeta que se va a encargar de llevar a cabo
+                        <strong>Paso 10: </strong> Vamos a crear una carpeta que se va a encargar de llevar a cabo
                         todas las operaciones del backend y lo primero que vamos a hacer va ser configurar la libreria
                         de supabase
                         Para esto primero vamos a crear el siguiente archivo donde importaremos la libreria de supabase
@@ -200,7 +227,7 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 9: </strong> Para declarar una conexion segura vamos a utilizar un fichero .env
+                        <strong>Paso 11: </strong> Para declarar una conexion segura vamos a utilizar un fichero .env
                         que nos ayude a mantener seguras las credenciales de la conexion
                     <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/9.png" alt="Captura de pantalla paso 9"
@@ -208,7 +235,7 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 10: </strong> Usamos las variables de entorno que hemos creado para declarar la
+                        <strong>Paso 12: </strong> Usamos las variables de entorno que hemos creado para declarar la
                         conexion
                     <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/10.png" alt="Captura de pantalla paso 10"
@@ -216,7 +243,7 @@
                     </div>
                     </p>
                     <p class="lead text-muted text-justify">
-                        <strong>Paso 11: </strong> Ahora vamos a ejecutar el proyecto, importante tener instalador el
+                        <strong>Paso 13: </strong> Ahora vamos a ejecutar el proyecto, importante tener instalador el
                         paquete de ejecucion de scripts
                         que lo instalaremos con el comando
                         <code>npm install react-scripts</code>
@@ -234,7 +261,10 @@
                         sobre un block de tareas donde podras aprender operaciones crud, autenticación, y mucho mas
                         sobre estas tecnologias
                     </p>
-                    <a href="proyectoPasoaPaso.html" class="btn custom-btn custom-btn-bg custom-btn-link">!Proyecto¡</a>
+                    <div class="text-center">
+                        <a href="proyectoPasoaPaso.html"
+                            class="btn custom-btn custom-btn-bg custom-btn-link">¡Proyecto!</a>
+                    </div>
                 </div>
             </div>
         </div>
