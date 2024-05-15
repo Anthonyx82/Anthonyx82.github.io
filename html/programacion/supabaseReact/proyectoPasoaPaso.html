@@ -94,24 +94,30 @@
                         (base de datos, autenticación del usuario, lógica, etc.). Para hacer todo esto, utiliza:
                     </p>
                     <ul class="lead text-muted text-justify">
-                        <li><a href="https://www.postgresql.org/">PostgreSQL</a> como base de datos relacional.
-                            PostgreSQL es una base de datos de código abierto y altamente potente y escalable.</li>
-                        <li>Realtime Postgres. Supabase utiliza la funcionalidad de notificaciones de PostgreSQL para
-                            proporcionar actualizaciones en tiempo real a través de WebSockets.</li>
-                        <li><a href="https://postgrest.org/">PostgREST</a> como capa de API REST. PostgREST es una
+                        <li>- <a href="https://www.postgresql.org/">PostgreSQL</a> como base de
+                            datos relacional.
+                            PostgreSQL es una base de datos de código abierto y altamente potente y escalable.</li> <br>
+                        <li>- Realtime Postgres. Supabase utiliza la funcionalidad de
+                            notificaciones de PostgreSQL para
+                            proporcionar actualizaciones en tiempo real a través de WebSockets.</li><br>
+                        <li>- <a href="https://postgrest.org/">PostgREST</a> como capa de API
+                            REST. PostgREST es una
                             herramienta que genera una API RESTful sobre una base de datos PostgreSQL, lo que permite
-                            interactuar con la base de datos utilizando peticiones HTTP.</li>
-                        <li>Auth. Supabase utiliza un sistema de autenticación basado en JWT (<a
+                            interactuar con la base de datos utilizando peticiones HTTP.</li><br>
+                        <li>- Auth. Supabase utiliza un sistema de autenticación basado en JWT (<a
                                 href="https://jwt.io/">JSON Web Tokens</a>) para autenticar usuarios y gestionar
-                            sesiones de usuario de forma segura.</li>
-                        <li>Storage. Supabase proporciona un servicio de almacenamiento de archivos, que utiliza
+                            sesiones de usuario de forma segura.</li><br>
+                        <li>- Storage. Supabase proporciona un servicio de almacenamiento de
+                            archivos, que utiliza
                             almacenamiento en la nube (como <a href="https://aws.amazon.com/s3/">AWS S3</a>) para
-                            almacenar los archivos de los usuarios.</li>
-                        <li><a href="https://graphql.org/">GraphQL</a>. Supabase ofrece soporte para GraphQL, lo que
+                            almacenar los archivos de los usuarios.</li><br>
+                        <li>- <a href="https://graphql.org/">GraphQL</a>. Supabase ofrece soporte
+                            para GraphQL, lo que
                             permite a los desarrolladores consultar y manipular los datos utilizando un lenguaje de
-                            consulta flexible y poderoso.</li>
-                        <li>WebSockets. Supabase utiliza WebSockets para proporcionar funcionalidades en tiempo real,
-                            como notificaciones y actualizaciones automáticas de datos.</li>
+                            consulta flexible y poderoso.</li><br>
+                        <li>- WebSockets. Supabase utiliza WebSockets para proporcionar
+                            funcionalidades en tiempo real,
+                            como notificaciones y actualizaciones automáticas de datos.</li><br>
                     </ul>
                     <p class="lead text-muted text-justify">
                         Gracias a estas tecnologias supabase nos proporciana funciones de autenticación del usuario como
@@ -154,8 +160,63 @@
                         final
                     </p>
                     <p class="lead text-muted text-justify">
+                        Por ultimo, a la hora de realizar la subida y descarga de archivos para que se muestren y
+                        eliminarlos en el caso de que la tarea a la que estan asociados se borre.
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Para ello utilizamos los buckets los cuales son almacenes de archivos con permisos propios los
+                        cuales nos ayudan a gestionar la subida de archivos. Estos se pueden crear y gestionar desde la
+                        interfaz web de supabase como hemos explicado en el <a
+                            href="supabaseReact.html#SetupProyecto">setup del proyecto</a> pero tambien podemos hacerlo
+                        desde react utilizando algo asi como un "CRUD" pero para buckets:
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><code> supabase.storage.createBucket() </code></li>
+                        <li><code> supabase.storage.getBucket() </code></li>
+                        <li><code> supabase.storage.updateBucket() </code></li>
+                        <li><code> supabase.storage.deleteBucket() </code></li>
+                    </ul>
+                    <br>
+                    <p class="lead text-muted text-justify">
+                        Ovbiamente que tenemos mas opciones para trabajar con buckets pero no son tan importantes por lo
+                        que os dejo la <a
+                            href="https://supabase.com/docs/reference/javascript/storage-createbucket">referencia</a> a
+                        la documentacion por si quereis mas informacion
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Ahora para subir nuestra imagen en nuestro proyecto simplemente tendremos que hacer otro CRUD
+                        muy sencillo y parecido al que hemos hecho antes pero para poder subir, descargar y eliminar
+                        archivos
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><code> supabase.storage.from("bucket").upload() </code></li>
+                        <li><code> supabase.storage.from("bucket").download() </code></li>
+                        <li><code> supabase.storage.from("bucket").remove() </code></li>
+                    </ul>
+                    <br>
+                    <p class="lead text-muted text-justify">
+                        Recordemos que tenemos opciones para mover, copiar, listar todos los archivos de un bucket,
+                        etc... pero no son tan importantes y no son tan usadas igualmente puedes ver todas estas
+                        operaciones <a
+                            href="https://supabase.com/docs/reference/javascript/storage-from-upload">aqui</a>
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        A la hora de guardar la tarear de la misma forma de la que lo hemos hecho antes, vamos a
+                        insertar la imagenes
+                        tanto la ruta en el campo de la base de datos como el archivo en el bucket, lo que nos quedaria
+                        asi:
+                    </p>
+                    <ul class="lead text-muted text-justify">
+                        <li><code>const { data, error } = await supabase.storage</code></li>
+                        <li><code>.from("tasks")
+                            .upload(`task_images/${image.name}`, image);<br>
+                        taskData.image_url = data.path;</code></li>
+                    </ul>
+                    <br>
+                    <p class="lead text-muted text-justify">
                         De esta forma ya sabemos como podemos hacer cualquier operacion realacionada con la base de
-                        datos y con la autenticacion del ususario, si quieres saber mas informacion puedes encontrar
+                        datos, subida de archivos y con la autenticacion del ususario, si quieres saber mas informacion
+                        puedes encontrar
                         cualquier cosa sobre supabase en su <a href="https://supabase.com/docs">documentacion</a> que
                         esta muy bien explicada y te sera muy sencillo encontrarlo. Por ultimo, es interesante revisar
                         la <a href="https://supabase.com/docs">documentacion</a> periodicamente ya que hacen bastantes
@@ -165,7 +226,7 @@
                         <h2 class="mb-4">Desarrollo de react</h2>
                     </div>
                     <p class="lead text-muted text-justify">
-                        
+
                     </p>
                 </div>
             </div>
