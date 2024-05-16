@@ -22,7 +22,7 @@ Ahora vamos a ejecutar el proyecto en el cual vamos a ejecutar el `Dockerfile`
 
 ```Docker
 docker build
-docker run "id imagen" -p PuertoAnfrition:PuertoMaquina
+docker run -p PuertoAnfrition:PuertoMaquina "id imagen"
 ```
 
 **NOTA:** El puerto de la maquina sera el que hemos indicado dentro del Dockerfile en mi caso es el 20000 pero lo puedes cambiar por otro y el puerto anfrition es el puerto de tu maquina donde luego te vas a conectar para ver el proyecto ejecutado
