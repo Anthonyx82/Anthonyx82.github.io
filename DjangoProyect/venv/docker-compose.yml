@@ -27,5 +27,5 @@ services:
     image: mysql
     container_name: "db_cont"
     environment:
-      - MYSQL_ROOT_PASSWORD=server1313*
-      - MYSQL_DATABASE=mysiteDB
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
