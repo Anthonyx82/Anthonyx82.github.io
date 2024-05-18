@@ -12,7 +12,7 @@ WORKDIR /app/supabase-react
 
 RUN chmod +x node_modules/.bin/react-scripts
 
-EXPOSE 20000
+EXPOSE 3000
 
 RUN npm run build
 
