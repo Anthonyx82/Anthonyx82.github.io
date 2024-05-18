@@ -21,7 +21,7 @@ Una vez configurado esto, y habiendo creado las bases de datos y bucket correspo
 Ahora vamos a ejecutar el proyecto en el cual vamos a ejecutar el `Dockerfile`
 
 ```Docker
-docker build
+docker build .
 docker run -p PuertoAnfrition:PuertoMaquina "id imagen"
 ```
 
