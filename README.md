@@ -16,9 +16,9 @@ Este proyecto consiste en un curriculum web donde se desarrollan y se desarrolla
 - 20 de abril al 25 de abril: Desarrollo del lado de Supabse ✅
 - 25 de abril al 1 de mayo: Desarrollo del lado de React ✅
 - 1 de mayo al 3 de mayo: Refactorizacion y despliegue del proyecto terminado ✅
-- 3 de mayo al 5 de mayo: Subida de documentacion/tutorial de las tecnologias del proyecto supabase-react
-- 5 de mayo al 10 de mayo: Subida de documentacion/tutorial de las tecnologias de proyecto docker
-- 10 de mayo hasta dia fianl del proyecto: memoria completa del proyecto y integracion de alguna otra documentcacion/tutorial de tecnologias segun tiempos
+- 3 de mayo al 5 de mayo: Subida de documentacion/tutorial de las tecnologias del proyecto supabase-react ✅
+- 5 de mayo al 10 de mayo: Subida de documentacion/tutorial de las tecnologias de proyecto docker ✅
+- 10 de mayo hasta dia final del proyecto: memoria completa del proyecto y integracion de alguna otra documentcacion/tutorial de tecnologias segun tiempos
 
 ### Requisitos de los proyectos supabase-react y docker
 

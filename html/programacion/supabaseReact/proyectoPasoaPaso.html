@@ -259,6 +259,47 @@
                         JavaScript soporta la orientación a objetos basada en prototipos, lo que facilita la
                         reutilización de código y la creación de aplicaciones más complejas y mantenibles.
                     </p>
+                    <div class="text-center">
+                        <h3 class="mb-4">Como funciona react y se utiliza en el proyecto?</h3>
+                    </div>
+                    <p class="lead text-muted text-justify">
+                        Una vez ya sabiendo los fundamentos de JavaScript podemos empezar a utilizar react en nuestro
+                        proyecto. Pongamos un ejemplo
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Una vez declarada nuestra conexion con supabase en react podemos exportar la conexion para poder
+                        utilizar las funciones en cualquier sitio de nuestro proyecto. Entonces simplemente usamos
+                        <code>export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y ya tenemos la
+                        variable supabase para importarla desde cuaqluier otro sitio para usarla
+                        <code>import { supabase } from "../supabase/client"</code> esto es la funcion principal de react
+                        y se considera un "hook"
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Tambien podemos utilizar estados de <code>input</code> y demas componentes para
+                        controlarlos muy parecido a como hariamos en kotlin por ejemplo con
+                        <code>onChange={(e) => setEmail(e.target.value)}</code> podremos recojer el email del usuario
+                        para autenticarlo
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        Otro apartado muy importante de react y que utilizamos en nuestro proyecto es la gestion de
+                        rutas y roles para esto utilizamos la dependencia <a
+                            href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> que podemos
+                        agregar con <code>npm install react-router-dom</code> y podremos gestionar las rutas y roles de
+                        nuestra aplicacion, asi que en nuestra App.js que es como el main de nuestra aplicacion
+                        agregaremos las rutas y en ella indicaremos las paginas que tenemos declarada en nuestra
+                        carpeta/paquete para ser redireccionadas y la aplicacion sepa que pagina mostrar en funcion de
+                        la url. Tambien en la App.js con <code>navigate</code> (que es otra funcion de esta libreria)
+                        podremos navegar entre las rutas y asi en el caso de que el usuario no este autenticado
+                        hacer que vaya una ruta especifica de esta forma no podra salir de hay hasta que no se
+                        autentifique, de esta forma podemos hacer al gestion de roles de nuestra aplicacion.
+                    </p>
+                    <p class="lead text-muted text-justify">
+                        A continuacion se ofrece el proyecto en github para poder acceder al codigo completo
+                    </p>
+                    <div class="text-center">
+                        <a href="https://github.com/Anthonyx82/Anthonyx82.github.io/tree/main/SupabaseReactProyect"
+                            class="btn custom-btn custom-btn-bg custom-btn-link">PROYECTO</a>
+                    </div>
                 </div>
             </div>
     </section>
