@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTasks } from "../context/TaskContext";
 
 function TaskForm() {
     const [taskName, setTaskName] = useState("");
     const [image, setImage] = useState(null);
-    const { createTask, adding } = useTasks();
+    const [taskGroup, setTaskGroup] = useState(""); // Estado inicial como cadena vacía
+    const [groups, setGroups] = useState([]);
+
+    const { getGroups, createTask, adding } = useTasks();
+
+    useEffect(() => {
+        const fetchGroups = async () => {
+            const fetchedGroups = await getGroups();
+            setGroups(fetchedGroups);
+        };
+
+        fetchGroups();
+    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        createTask(taskName, image);
+        if (!taskGroup) {
+            alert("Por favor, selecciona un grupo válido");
+            return;
+        }
+        await createTask(taskName, image, taskGroup);
         setTaskName("");
         setImage(null);
+        setTaskGroup("");
     }
 
     return (
@@ -23,6 +40,21 @@ function TaskForm() {
                 value={taskName}
                 className="form-control mb-2"
             />
+            <label htmlFor="taskGroup">Elige un grupo:</label>
+            <select
+                id="taskGroup"
+                name="taskGroup"
+                value={taskGroup}
+                onChange={(e) => setTaskGroup(e.target.value)}
+                className="form-control mb-2"
+            >
+                <option value="">Selecciona un grupo</option> {/* Opción predeterminada */}
+                {groups.map((group) => (
+                    <option key={group.id} value={group.id}>
+                        {group.name}
+                    </option>
+                ))}
+            </select>
             <input
                 type="file"
                 accept="image/*"
