@@ -1,38 +1,29 @@
-import { useTasks } from "../context/TaskContext"
-import { useEffect } from "react"
-import TaskCard from "./TaskCard"
+import { useState } from "react";
+import { useTasks } from "../context/TaskContext";
+import GroupCard from "./GroupCard";
+import TaskListByGroup from "./TaskListByGroup";
 
-function TaskList({done = false}) {
+function TaskList({ done }) { // Añade "done" como una propiedad
+    const { groups } = useTasks();
+    const [selectedGroup, setSelectedGroup] = useState(null);
 
-    const { tasks, getTasks, loading } = useTasks()
-
-    useEffect(() => {
-        getTasks(done)
-    }, [done])
-
-    function renderTasks() {
-        if (loading) {
-            return <p>Cargando...</p>
-        } else if (tasks.length === 0) {
-            return <p>No hay tareas</p>
-        } else {
-            return (
-                <div>
-                    {
-                        tasks.map((task) => (
-                            <TaskCard task={task} key={task.id} />
-                        ))
-                    }
-                </div>
-            )
-        }
-    }
+    const handleGroupClick = (group) => {
+        setSelectedGroup(group);
+    };
 
     return (
         <div>
-            {renderTasks()}
+            {selectedGroup ? (
+                <TaskListByGroup done={done} group={selectedGroup} onClose={() => setSelectedGroup(null)} /> // Pasa "done" como propiedad
+            ) : (
+                <div>
+                    {groups.map((group) => (
+                        <GroupCard key={group.id} group={group} onClick={() => handleGroupClick(group)} />
+                    ))}
+                </div>
+            )}
         </div>
-    )
+    );
 }
 
-export default TaskList
+export default TaskList;

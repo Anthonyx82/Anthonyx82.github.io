@@ -16,7 +16,7 @@ function TaskForm() {
         };
 
         fetchGroups();
-    }, []);
+    }, [getGroups]); // Hacer que el efecto dependa de getGroups
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -48,7 +48,7 @@ function TaskForm() {
                 onChange={(e) => setTaskGroup(e.target.value)}
                 className="form-control mb-2"
             >
-                <option value="">Selecciona un grupo</option> {/* Opción predeterminada */}
+                <option value="">Selecciona un grupo</option>
                 {groups.map((group) => (
                     <option key={group.id} value={group.id}>
                         {group.name}
