@@ -40,7 +40,6 @@ function TaskForm() {
                 value={taskName}
                 className="form-control mb-2"
             />
-            <label htmlFor="taskGroup">Elige un grupo:</label>
             <select
                 id="taskGroup"
                 name="taskGroup"

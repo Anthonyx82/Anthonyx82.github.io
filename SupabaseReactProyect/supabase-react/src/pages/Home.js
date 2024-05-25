@@ -20,11 +20,11 @@ function Home() {
   return (
     <div className="row pt-4">
       <div className="col-md-4">
-        {/* Muestra el formulario de grupos */}
+
         <GroupForm />
       </div>
       <div className="col-md-4 offset-md-4">
-        {/* Muestra el formulario de tareas */}
+        
         <TaskForm />
 
         <header className="d-flex justify-content-between my-3">
