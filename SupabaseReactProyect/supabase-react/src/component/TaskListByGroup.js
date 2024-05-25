@@ -36,8 +36,8 @@ function TaskListByGroup({ done, group, onClose }) {
 
     return (
         <div>
-            <button className="btn btn-dark btn-sm" onClick={onClose}>Volver a la lista de grupos</button>
-            <button className="btn btn-dark btn-sm" onClick={generatePDF}>Generar PDF</button>
+            <button className="btn btn-dark btn-sm me-2" onClick={onClose}>Volver a la lista de grupos</button>
+            <button className="btn btn-dark btn-sm me-2" onClick={generatePDF}>Generar PDF</button>
             {loading ? (
                 <p>Cargando...</p>
             ) : (
