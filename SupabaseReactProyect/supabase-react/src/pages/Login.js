@@ -14,7 +14,7 @@ function Login() {
         email: email,
       });
       if (error) throw error;
-      setMessage("Email enviado correctament. Revisa tu bandeja de entrada");
+      setMessage("Email enviado correctamente. Revisa tu bandeja de entrada");
       setError(null);
     } catch (error) {
       setMessage(null);

@@ -4,7 +4,7 @@ import { useTasks } from "../context/TaskContext";
 function TaskForm() {
     const [taskName, setTaskName] = useState("");
     const [image, setImage] = useState(null);
-    const [taskGroup, setTaskGroup] = useState(""); // Estado inicial como cadena vacía
+    const [taskGroup, setTaskGroup] = useState("");
     const [groups, setGroups] = useState([]);
 
     const { getGroups, createTask, adding } = useTasks();
@@ -15,8 +15,10 @@ function TaskForm() {
             setGroups(fetchedGroups);
         };
 
-        fetchGroups();
-    }, [getGroups]); // Hacer que el efecto dependa de getGroups
+        const timeoutId = setTimeout(fetchGroups, 3000);
+
+        return () => clearTimeout(timeoutId);
+    }, [getGroups]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
