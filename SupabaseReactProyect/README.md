@@ -4,7 +4,7 @@ Proyecto de supabase y react con el cual se ofrece un gestor de tareas con subid
 
 Con esta aplicacion se pretende ayudar a comprender como funcionan las tecnologias de react y de supabase juntas tocando todas las funcionalidades posibles para que no quede ningun cabo suelto y pueda servir de gia
 
-## Despliege
+## Despliegue
 
 Para desplegar el proyecto lo primero tendremos que configurar un archivo `.env.local` en la carpeta principal del proyecto el cual va a contener las siguientes variables de entorno
 
