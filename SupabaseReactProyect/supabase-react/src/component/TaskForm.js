@@ -15,7 +15,7 @@ function TaskForm() {
             setGroups(fetchedGroups);
         };
 
-        const timeoutId = setTimeout(fetchGroups, 3000);
+        const timeoutId = setTimeout(fetchGroups, 30000);
 
         return () => clearTimeout(timeoutId);
     }, [getGroups]);
