@@ -426,6 +426,12 @@ b, strong {
 
 // OWL CAROUSEL
 .owl-carousel {
+	.item img{
+		max-width: 80%; 
+		max-height: 80%;
+		margin: 0 auto; 
+		display: block; 
+	}
 	.owl-nav {
 		span {
 			display: none;
