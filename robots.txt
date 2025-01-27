@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://anthonyx82.github.io/sitemap.xml
