@@ -72,20 +72,20 @@
                     <div class="text-center">
                         <h2 class="mb-4">SMTP Y DNS</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         En esta seccion vamos a explicar como hemos consegido montar un servidor DNS y un SMTP
                         usando docker que luego vamos a poder utilizar en nuestros Proyectos
                     </p>
                     <div class="text-center">
                         <h2 class="mb-4">Que necesitamos?</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Lo primero y mas importante que necesitamos es alguna forma de poder registrar un dominio
                         <strong> EL CUAL PODAMOS ADMINISTRAR Y AÑADIR REGISTROS </strong> para poder agregar los
                         REGISTROS
                         necesarios a nuestro DNS
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         En este caso no quiero recomendar ningun registro/administrador de dominios ya que los que son
                         de pago
                         estan muy bien pero abusan muchisimo de los precios ya que no hay competencia real y los
@@ -96,19 +96,19 @@
                         manera gratuita
                         pero ya no solo en suscripciones pago
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Ademas de un domino tambien vamos a necesitar un servidor smtp que es lo que vamos a hostear con
                         docker
                         el cual va a utilizar nuestro dominio dns para dar servicio
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         La imagen de docker que vamos a utilizar va a ser: <a rel="noopener noreferrer"
                             href="https://hub.docker.com/r/mailserver/docker-mailserver">mailserver/docker-mailserver</a>
                     </p>
                     <div class="text-center">
                         <h2 class="mb-4">Empezemos</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Lo primero vamos a necesitar abrir los siguientes <a rel="noopener noreferrer"
                             href="https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/#overview-of-email-ports">
                             puerto </a> en funcion de lo que queramos
@@ -116,17 +116,17 @@
                         caso la forma de hacerlo
                         es la misma
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Ahora vamos a crear los siguientes <a
                             href="https://docker-mailserver.github.io/docker-mailserver/latest/usage/#minimal-dns-setup">registros</a>
                         en nuestro gestor de dominio
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li>MX: mail.example.com (Encargado de indicar el dns)</li>
                         <li>A: 11.22.33.44 (Encargado de informar la ip a la que hacemos referencia)</li>
                         <li>PTR: mail.example.com (Encargado de informar el subdominio al que hacemos referencia)</li>
                     </ul>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Por ultimo, vamos a cargar el servidor SMTP con los datos de nuestro DNS.
                         Vamos a clonar todos los archivos necesarios para el servidor
                         <br>
@@ -137,19 +137,19 @@
                             wget "${DMS_GITHUB_URL}/mailserver.env"
                         </code>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Y con todos los archivos clonados vamos a editar el <code>compose.yaml</code> donde vamos a
                         agregar nuestro registro MX que hemos creado en nuestro gestor de dns
                         <br>
                         <br>
                         <code> hostname: mail.example.com </code>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Tambien es recomendable hecharle un vistazo a <code>mailserver.env</code> ya que tiene algunas
                         configuraciones
                         que pueden ser muy utiles
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Una vez todo configurado vamos a ejecutarlo con <code>docker compose start</code> y con el
                         comando <code>docker exec -it &lt;CONTAINER NAME&gt; setup help</code> vamos ver todos los
                         comandos entre los cuales podemos crear usuarios entre otras operaciones. Y ya con todo esto

@@ -15,6 +15,7 @@
     $('.color-mode').click(function () {
       $('.color-mode-icon').toggleClass('active');
       $('body').toggleClass('dark-mode');
+      $('p').css('color', $('body').hasClass('dark-mode') ? 'white' : '');
 
       var currentMode = $('body').hasClass('dark-mode') ? 'dark' : 'light';
       localStorage.setItem('colorMode', currentMode);

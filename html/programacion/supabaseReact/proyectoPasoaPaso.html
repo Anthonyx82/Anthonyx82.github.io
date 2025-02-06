@@ -72,13 +72,13 @@
                     <div class="text-center">
                         <h2 class="mb-4">Descripcion del proyecto</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         El proyecto consiste en un bloc de tareas en el cual cada usuario se autentica utilizando un
                         magic link y puede agregar, borrar y marcar como completadas sus tareas. Ademas de poder
                         agruparlas en grupos de tareas y poder descargar un pdf con todas las tareas de ese grupo,
                         tambien se puede agregar una imagen a cada tarea para poder indentificarla.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         El proyecto utiliza las tecnologias: react, supabase, docker, nodejs y npm que son las que hemos
                         enseñado a
                         introducirlas en un proyecto
@@ -86,17 +86,17 @@
                     <div class="text-center">
                         <h2 class="mb-4">Desarrollo de supabase</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         A la hora de desarrollar con supabase tenemos que conocer como funciona su <a
                             href="https://github.com/supabase/supabase-js">libreria</a> (En este
                         caso para javascript), en funcion de lenguaje de programacion estes utilizando tendras que usar
                         la que corresponda
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         La librería de Supabase tiene que ser capaz de gestionar todo un backend con lo que conlleva
                         (base de datos, autenticación del usuario, lógica, etc.). Para hacer todo esto, utiliza:
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li>- <a href="https://www.postgresql.org/">PostgreSQL</a> como base de
                             datos relacional.
                             PostgreSQL es una base de datos de código abierto y altamente potente y escalable.</li> <br>
@@ -122,33 +122,33 @@
                             funcionalidades en tiempo real,
                             como notificaciones y actualizaciones automáticas de datos.</li><br>
                     </ul>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Gracias a estas tecnologias supabase nos proporciana funciones de autenticación del usuario como
                         puede ser <code> supabase.auth.getUser() </code>la cual nos da en JSON toda la informacion
                         acerca del usuario que esta autenticado o <code> supabase.auth.signOut() </code> que nos permite
                         deslogear al usuario en cualquier contexto
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Tambien podemos utilizar <code> supabase.from("tabla") </code> que nos permite seleccionar
                         cualquier tabla de la base de datos para poder hacer operaciones crud en ella
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li><code> supabase.from("tabla").insert() </code></li>
                         <li><code> supabase.from("tabla").update() </code></li>
                         <li><code> supabase.from("tabla").delete() </code></li>
                         <li><code> supabase.from("tabla").select() </code></li>
                     </ul>
                     <br>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Por supuesto que podemos hacer comprobaciones a lo hora de hacer update, delete o select
                         utilizando la funcion <code>.eq()</code>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Y el resultado de la operacion la podemos recoger añadiendo la funcion <code> .select() </code>
                         al final de la sentencia. Por ejemplo para añadir una tarea en nuestro proyecto y recoger el
                         resultado de la operacion haremos lo siguiente:
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li><code>const user = supabase.auth.getUser(); </code></li>
                         <li><code> const { error, data } = await supabase.from("tasks").insert({
                             name: taskName, 
@@ -156,67 +156,67 @@
                         }).select() </code></li>
                     </ul>
                     <br>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Como podemos ver se recoje el usuario para hacer el insert de la tarea con su usuario insertado,
                         y hacemos el insert dentro de la tabla "tasks", y para recoger el resultado y guardar el
                         <code>{data, error}</code> de este utilizamos la sentencia <code> .select() </code> al
                         final
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Por ultimo, a la hora de realizar la subida y descarga de archivos para que se muestren y
                         eliminarlos en el caso de que la tarea a la que estan asociados se borre.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Para ello utilizamos los buckets los cuales son almacenes de archivos con permisos propios los
                         cuales nos ayudan a gestionar la subida de archivos. Estos se pueden crear y gestionar desde la
                         interfaz web de supabase como hemos explicado en el <a
                             href="supabaseReact.html#SetupProyecto">setup del proyecto</a> pero tambien podemos hacerlo
                         desde react utilizando algo asi como un "CRUD" pero para buckets:
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li><code> supabase.storage.createBucket() </code></li>
                         <li><code> supabase.storage.getBucket() </code></li>
                         <li><code> supabase.storage.updateBucket() </code></li>
                         <li><code> supabase.storage.deleteBucket() </code></li>
                     </ul>
                     <br>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Ovbiamente que tenemos mas opciones para trabajar con buckets pero no son tan importantes por lo
                         que os dejo la <a
                             href="https://supabase.com/docs/reference/javascript/storage-createbucket">referencia</a> a
                         la documentacion por si quereis mas informacion
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Ahora para subir nuestra imagen en nuestro proyecto simplemente tendremos que hacer otro CRUD
                         muy sencillo y parecido al que hemos hecho antes pero para poder subir, descargar y eliminar
                         archivos
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li><code> supabase.storage.from("bucket").upload() </code></li>
                         <li><code> supabase.storage.from("bucket").download() </code></li>
                         <li><code> supabase.storage.from("bucket").remove() </code></li>
                     </ul>
                     <br>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Recordemos que tenemos opciones para mover, copiar, listar todos los archivos de un bucket,
                         etc... pero no son tan importantes y no son tan usadas igualmente puedes ver todas estas
                         operaciones <a
                             href="https://supabase.com/docs/reference/javascript/storage-from-upload">aqui</a>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         A la hora de guardar la tarear de la misma forma de la que lo hemos hecho antes, vamos a
                         insertar la imagenes
                         tanto la ruta en el campo de la base de datos como el archivo en el bucket, lo que nos quedaria
                         asi:
                     </p>
-                    <ul class="lead text-muted text-justify">
+                    <ul class="lead  text-justify">
                         <li><code>const { data, error } = await supabase.storage</code></li>
                         <li><code>.from("tasks")
                             .upload(`task_images/${image.name}`, image);<br>
                         taskData.image_url = data.path;</code></li>
                     </ul>
                     <br>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         De esta forma ya sabemos como podemos hacer cualquier operacion realacionada con la base de
                         datos, subida de archivos y con la autenticacion del ususario, si quieres saber mas informacion
                         puedes encontrar
@@ -228,13 +228,13 @@
                     <div class="text-center">
                         <h2 class="mb-4">Desarrollo de React</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         A la hora de desarrollar con React o con cualquier otro lenguale de programacion debemos tener
                         en cuenta las caracteristicas y fundamentos bases del lenguaje y es lo que hemos utilizado para
                         desarrollar nuestro proyecto, usar funcionalidades basicas e intentar abordarlas todas para que
                         sirva de ejemplo para desarrollar cualquier otro proyecto.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Lo primero que tenemos que tener en cuenta es que React no es un lenguaje de programacion como
                         tal si no que es un framework de javascript, por lo que los fundamentos/principios son los
                         mismos que en javascript ovbiamente no va a ser exactemente iguales pero al final "el que sabe
@@ -243,7 +243,7 @@
                     <div class="text-center">
                         <h3 id="javascript" class="mb-4">Como funciona javascript?</h3>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Entonces, ¿qué es JavaScript? ¿Y cómo funciona? <a
                             href="https://developer.mozilla.org/es/docs/Web/JavaScript">JavaScript</a> es un lenguaje de
                         programación
@@ -256,7 +256,7 @@
                         través de AJAX. JavaScript se ejecuta en el navegador del usuario, lo que significa que puede
                         responder rápidamente a las acciones del usuario sin necesidad de recargar la página.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Los fundamentos de JavaScript incluyen variables, operadores, estructuras de control de flujo
                         (como bucles y condicionales), funciones, y objetos. Una característica distintiva de JavaScript
                         es su capacidad de trabajar de manera asíncrona, lo que permite que el código continúe
@@ -264,18 +264,18 @@
                         JavaScript soporta la orientación a objetos basada en prototipos, lo que facilita la
                         reutilización de código y la creación de aplicaciones más complejas y mantenibles.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>IMPORTANTE:</strong> a la hora de conocer javascript tenemos que tener muy en cuenta <a
                             href="../nodejs/npm.html">nodejs</a>
                     </p>
                     <div class="text-center">
                         <h3 class="mb-4">Como funciona react y se utiliza en el proyecto?</h3>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Una vez ya sabiendo los fundamentos de JavaScript podemos empezar a utilizar react en nuestro
                         proyecto. Pongamos un ejemplo
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Una vez declarada nuestra conexion con supabase en react podemos exportar la conexion para poder
                         utilizar las funciones en cualquier sitio de nuestro proyecto. Entonces simplemente usamos
                         <code>export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y ya tenemos la
@@ -283,13 +283,13 @@
                         <code>import { supabase } from "../supabase/client"</code> esto es la funcion principal de react
                         y se considera un "hook"
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Tambien podemos utilizar estados de <code>input</code> y demas componentes para
                         controlarlos muy parecido a como hariamos en kotlin por ejemplo con
                         <code>onChange={(e) => setEmail(e.target.value)}</code> podremos recoger el email del usuario
                         para autenticarlo
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Otro apartado muy importante de react y que utilizamos en nuestro proyecto es la gestion de
                         rutas y roles para esto utilizamos la dependencia <a
                             href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> que podemos
@@ -302,7 +302,7 @@
                         hacer que vaya una ruta especifica de esta forma no podra salir de hay hasta que no se
                         autentifique, de esta forma podemos hacer al gestion de roles de nuestra aplicacion.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         A continuacion se ofrece el proyecto en github para poder acceder al codigo completo
                     </p>
                     <div class="text-center">

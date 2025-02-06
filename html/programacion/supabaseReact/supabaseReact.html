@@ -72,7 +72,7 @@
                     <div class="text-center">
                         <h2 class="mb-4">Supabase</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
 
                         <a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</a> es una
                         plataforma de código abierto que ofrece una solución integral para el desarrollo
@@ -83,7 +83,7 @@
                         permite a los desarrolladores crear aplicaciones potentes de manera rápida y eficiente,
                         aprovechando tecnologías modernas y estándares abiertos.
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Gracias a esto podemos crear aplicaciones web sin necesidad de un backend y tan solo con un
                         frontend. Esto sistema fue desarrollado por primera vez en 2011 por <a
                             href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a>
@@ -93,7 +93,7 @@
                     <div class="text-center">
                         <h2 class="mb-4">React</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <a href="https://es.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> es una
                         biblioteca de <a href="proyectoPasoaPaso.html#javascript">JavaScript</a> de código abierto
                         utilizada para construir
@@ -110,7 +110,7 @@
                     <div class="text-center">
                         <h2 id="SetupProyecto" class="mb-4">Supabase y React 🤝</h2>
                     </div>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Lo que vamos a hacer es utilizar supabase para tener un backend que vamos a poder utilziar con
                         un frontend en react. Recuerda que podemos usar supabase autohosteandolo nosotros
                         mismos o desde la pagina web oficial dependiendo de los servidores de supabase, en mi caso lo
@@ -119,14 +119,14 @@
                         Si te interesa saber como autohostearlo aqui te dejo <a href="selfhostingSupabase.html"
                             target="_blank" rel="noopener noreferrer"> mas informacion </a>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         A continuacion vamos a explicar como realizar el setup de nuestro proyecto con react y supabase.
                         Al
                         final para todos aquellos que quieran aprender como realizar un proyecto con funcionalidades
                         reales y
                         completas podran encontrar mas informacion sobre como hacerlo paso a paso
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 1: </strong> Creamos y configuramos el proyecto de supabase pulsando en "Start your
                         proyect"
                     <div style="text-align: center;">
@@ -134,14 +134,14 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 2: </strong> Ponemos nombre y una contraseña para la base de datos
                     <div style="text-align: center;">
                         <img src="../../../images/project/supabseReact/2.jpg" alt="Captura de pantalla paso 2"
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 3: </strong> Vamos al apartado de "Table editor" y vamos a crear una tabla de
                         tareas donde se almacenaran las tareas del usuario, la crearemos con los campos id, created_at
                         name y done. Con estos campos se almacenaran las tareas de cada ususario. Podemos elegir el tipo
@@ -157,7 +157,7 @@
                     </div>
 
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 4: </strong> No necesitamos crear una tabla de usuario porque de eso ya se encarga
                         supabase de forma automatica
                     <div style="text-align: center;">
@@ -165,7 +165,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 5: </strong> Vamos a crear ahora un bucket donde vamos a almacenar los archivos y
                         dentro crearemos una carpeta para guardar hay los archivos, en este caso solo permitiremos que
                         solo se puedan subir imagenes de cualquier tipo
@@ -179,7 +179,7 @@
                             style="max-width: 100%; height: auto;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 6: </strong> Agregamos los permisos necesarios al bucket para que todo funcione sin
                         problemas, y solo los usuarios autenticados podras acceder al bucket
                     <div style="text-align: center;">
@@ -187,7 +187,7 @@
                             style="max-width: 100%; height: auto;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 7: </strong> Agregamos la tabla de grupos y el campo a con la clave foranea a la
                         tabla task
                     <div style="text-align: center;">
@@ -200,7 +200,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 8: </strong> Con esto ya terminamos el setup por supabase asi que vamos a crear el
                         proyecto de react con el comando:
                         <code>npx create-react-app Supabase-React</code>
@@ -209,7 +209,7 @@
                             style="max-width: 100%; height: auto;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 9: </strong> Añadiremos la <a href="https://github.com/supabase/supabase-js"
                             target="_blank" rel="noopener noreferrer">libreria de supabase</a> a nuestro proyecto
                     <div style="text-align: center;">
@@ -217,7 +217,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 10: </strong> Vamos a borrar todos los archivos de la carpeta src para quedarnos
                         solo
                         con lo que se ven en la captura, ya que estos son archivos predeterminados que no nos hacen
@@ -228,7 +228,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 11: </strong> Vamos a crear una carpeta que se va a encargar de llevar a cabo
                         todas las operaciones del backend y lo primero que vamos a hacer va ser configurar la libreria
                         de supabase
@@ -239,7 +239,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 12: </strong> Para declarar una conexion segura vamos a utilizar un fichero .env
                         que nos ayude a mantener seguras las credenciales de la conexion
                     <div style="text-align: center;">
@@ -247,7 +247,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 13: </strong> Usamos las variables de entorno que hemos creado para declarar la
                         conexion
                     <div style="text-align: center;">
@@ -255,7 +255,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         <strong>Paso 14: </strong> Ahora vamos a ejecutar el proyecto, importante tener instalador el
                         paquete de ejecucion de scripts
                         que lo instalaremos con el comando
@@ -266,7 +266,7 @@
                             style="max-width: 100%; height: auto; display: inline-block;">
                     </div>
                     </p>
-                    <p class="lead text-muted text-justify">
+                    <p class="lead text-justify">
                         Con esto ya habriamos terminado el setup de nuestro proyecto y para todos aquellos que aun
                         quieran
                         seguir aprendiendo sobre react y supabase vamos a pasar a documentar un proyecto que hemos
