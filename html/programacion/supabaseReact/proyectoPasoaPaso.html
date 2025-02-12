@@ -36,7 +36,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
                         <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
                                 Mi</span></a>
@@ -55,7 +55,7 @@
                     </li>
                 </ul>
 
-                <ul class="navbar-nav">
+                <ul class="lead navbar-nav">
                     <div class="color-mode">
                         <i class="color-mode-icon"></i>
                     </div>
@@ -96,7 +96,7 @@
                         La librería de Supabase tiene que ser capaz de gestionar todo un backend con lo que conlleva
                         (base de datos, autenticación del usuario, lógica, etc.). Para hacer todo esto, utiliza:
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li>- <a href="https://www.postgresql.org/">PostgreSQL</a> como base de
                             datos relacional.
                             PostgreSQL es una base de datos de código abierto y altamente potente y escalable.</li> <br>
@@ -132,7 +132,7 @@
                         Tambien podemos utilizar <code> supabase.from("tabla") </code> que nos permite seleccionar
                         cualquier tabla de la base de datos para poder hacer operaciones crud en ella
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li><code> supabase.from("tabla").insert() </code></li>
                         <li><code> supabase.from("tabla").update() </code></li>
                         <li><code> supabase.from("tabla").delete() </code></li>
@@ -148,7 +148,7 @@
                         al final de la sentencia. Por ejemplo para añadir una tarea en nuestro proyecto y recoger el
                         resultado de la operacion haremos lo siguiente:
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li><code>const user = supabase.auth.getUser(); </code></li>
                         <li><code> const { error, data } = await supabase.from("tasks").insert({
                             name: taskName, 
@@ -173,7 +173,7 @@
                             href="supabaseReact.html#SetupProyecto">setup del proyecto</a> pero tambien podemos hacerlo
                         desde react utilizando algo asi como un "CRUD" pero para buckets:
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li><code> supabase.storage.createBucket() </code></li>
                         <li><code> supabase.storage.getBucket() </code></li>
                         <li><code> supabase.storage.updateBucket() </code></li>
@@ -191,7 +191,7 @@
                         muy sencillo y parecido al que hemos hecho antes pero para poder subir, descargar y eliminar
                         archivos
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li><code> supabase.storage.from("bucket").upload() </code></li>
                         <li><code> supabase.storage.from("bucket").download() </code></li>
                         <li><code> supabase.storage.from("bucket").remove() </code></li>
@@ -209,7 +209,7 @@
                         tanto la ruta en el campo de la base de datos como el archivo en el bucket, lo que nos quedaria
                         asi:
                     </p>
-                    <ul class="lead  text-justify">
+                    <ul class="lead text-justify">
                         <li><code>const { data, error } = await supabase.storage</code></li>
                         <li><code>.from("tasks")
                             .upload(`task_images/${image.name}`, image);<br>
