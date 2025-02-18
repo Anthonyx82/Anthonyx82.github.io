@@ -131,27 +131,27 @@
                         Vamos a clonar todos los archivos necesarios para el servidor
                         <br>
                         <br>
-                        <code>
+                        <code class="lead">
                             DMS_GITHUB_URL="https://raw.githubusercontent.com/docker-mailserver/docker-mailserver/master"<br>
                             wget "${DMS_GITHUB_URL}/compose.yaml"<br>
                             wget "${DMS_GITHUB_URL}/mailserver.env"
                         </code>
                     </p>
                     <p class="lead text-justify">
-                        Y con todos los archivos clonados vamos a editar el <code>compose.yaml</code> donde vamos a
+                        Y con todos los archivos clonados vamos a editar el <code class="lead">compose.yaml</code> donde vamos a
                         agregar nuestro registro MX que hemos creado en nuestro gestor de dns
                         <br>
                         <br>
-                        <code> hostname: mail.example.com </code>
+                        <code class="lead"> hostname: mail.example.com </code>
                     </p>
                     <p class="lead text-justify">
-                        Tambien es recomendable hecharle un vistazo a <code>mailserver.env</code> ya que tiene algunas
+                        Tambien es recomendable hecharle un vistazo a <code class="lead">mailserver.env</code> ya que tiene algunas
                         configuraciones
                         que pueden ser muy utiles
                     </p>
                     <p class="lead text-justify">
-                        Una vez todo configurado vamos a ejecutarlo con <code>docker compose start</code> y con el
-                        comando <code>docker exec -it &lt;CONTAINER NAME&gt; setup help</code> vamos ver todos los
+                        Una vez todo configurado vamos a ejecutarlo con <code class="lead">docker compose start</code> y con el
+                        comando <code class="lead">docker exec -it &lt;CONTAINER NAME&gt; setup help</code> vamos ver todos los
                         comandos entre los cuales podemos crear usuarios entre otras operaciones. Y ya con todo esto
                         habriamos terminado nuestro servido smtp, dejo <a
                             href="https://docker-mailserver.github.io/docker-mailserver/latest/">mas informacion

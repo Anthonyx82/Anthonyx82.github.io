@@ -124,33 +124,33 @@
                     </ul>
                     <p class="lead text-justify">
                         Gracias a estas tecnologias supabase nos proporciana funciones de autenticación del usuario como
-                        puede ser <code> supabase.auth.getUser() </code>la cual nos da en JSON toda la informacion
-                        acerca del usuario que esta autenticado o <code> supabase.auth.signOut() </code> que nos permite
+                        puede ser <code class="lead"> supabase.auth.getUser() </code>la cual nos da en JSON toda la informacion
+                        acerca del usuario que esta autenticado o <code class="lead"> supabase.auth.signOut() </code> que nos permite
                         deslogear al usuario en cualquier contexto
                     </p>
                     <p class="lead text-justify">
-                        Tambien podemos utilizar <code> supabase.from("tabla") </code> que nos permite seleccionar
+                        Tambien podemos utilizar <code class="lead"> supabase.from("tabla") </code> que nos permite seleccionar
                         cualquier tabla de la base de datos para poder hacer operaciones crud en ella
                     </p>
                     <ul class="lead text-justify">
-                        <li><code> supabase.from("tabla").insert() </code></li>
-                        <li><code> supabase.from("tabla").update() </code></li>
-                        <li><code> supabase.from("tabla").delete() </code></li>
-                        <li><code> supabase.from("tabla").select() </code></li>
+                        <li><code class="lead"> supabase.from("tabla").insert() </code></li>
+                        <li><code class="lead"> supabase.from("tabla").update() </code></li>
+                        <li><code class="lead"> supabase.from("tabla").delete() </code></li>
+                        <li><code class="lead"> supabase.from("tabla").select() </code></li>
                     </ul>
                     <br>
                     <p class="lead text-justify">
                         Por supuesto que podemos hacer comprobaciones a lo hora de hacer update, delete o select
-                        utilizando la funcion <code>.eq()</code>
+                        utilizando la funcion <code class="lead">.eq()</code>
                     </p>
                     <p class="lead text-justify">
-                        Y el resultado de la operacion la podemos recoger añadiendo la funcion <code> .select() </code>
+                        Y el resultado de la operacion la podemos recoger añadiendo la funcion <code class="lead"> .select() </code>
                         al final de la sentencia. Por ejemplo para añadir una tarea en nuestro proyecto y recoger el
                         resultado de la operacion haremos lo siguiente:
                     </p>
                     <ul class="lead text-justify">
-                        <li><code>const user = supabase.auth.getUser(); </code></li>
-                        <li><code> const { error, data } = await supabase.from("tasks").insert({
+                        <li><code class="lead">const user = supabase.auth.getUser(); </code></li>
+                        <li><code class="lead"> const { error, data } = await supabase.from("tasks").insert({
                             name: taskName, 
                             userid: (await user).data.user.id,
                         }).select() </code></li>
@@ -159,7 +159,7 @@
                     <p class="lead text-justify">
                         Como podemos ver se recoje el usuario para hacer el insert de la tarea con su usuario insertado,
                         y hacemos el insert dentro de la tabla "tasks", y para recoger el resultado y guardar el
-                        <code>{data, error}</code> de este utilizamos la sentencia <code> .select() </code> al
+                        <code class="lead">{data, error}</code> de este utilizamos la sentencia <code class="lead"> .select() </code> al
                         final
                     </p>
                     <p class="lead text-justify">
@@ -174,10 +174,10 @@
                         desde react utilizando algo asi como un "CRUD" pero para buckets:
                     </p>
                     <ul class="lead text-justify">
-                        <li><code> supabase.storage.createBucket() </code></li>
-                        <li><code> supabase.storage.getBucket() </code></li>
-                        <li><code> supabase.storage.updateBucket() </code></li>
-                        <li><code> supabase.storage.deleteBucket() </code></li>
+                        <li><code class="lead"> supabase.storage.createBucket() </code></li>
+                        <li><code class="lead"> supabase.storage.getBucket() </code></li>
+                        <li><code class="lead"> supabase.storage.updateBucket() </code></li>
+                        <li><code class="lead"> supabase.storage.deleteBucket() </code></li>
                     </ul>
                     <br>
                     <p class="lead text-justify">
@@ -192,9 +192,9 @@
                         archivos
                     </p>
                     <ul class="lead text-justify">
-                        <li><code> supabase.storage.from("bucket").upload() </code></li>
-                        <li><code> supabase.storage.from("bucket").download() </code></li>
-                        <li><code> supabase.storage.from("bucket").remove() </code></li>
+                        <li><code class="lead"> supabase.storage.from("bucket").upload() </code></li>
+                        <li><code class="lead"> supabase.storage.from("bucket").download() </code></li>
+                        <li><code class="lead"> supabase.storage.from("bucket").remove() </code></li>
                     </ul>
                     <br>
                     <p class="lead text-justify">
@@ -210,8 +210,8 @@
                         asi:
                     </p>
                     <ul class="lead text-justify">
-                        <li><code>const { data, error } = await supabase.storage</code></li>
-                        <li><code>.from("tasks")
+                        <li><code class="lead">const { data, error } = await supabase.storage</code></li>
+                        <li><code class="lead">.from("tasks")
                             .upload(`task_images/${image.name}`, image);<br>
                         taskData.image_url = data.path;</code></li>
                     </ul>
@@ -278,26 +278,26 @@
                     <p class="lead text-justify">
                         Una vez declarada nuestra conexion con supabase en react podemos exportar la conexion para poder
                         utilizar las funciones en cualquier sitio de nuestro proyecto. Entonces simplemente usamos
-                        <code>export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y ya tenemos la
+                        <code class="lead">export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y ya tenemos la
                         variable supabase para importarla desde cuaqluier otro sitio para usarla
-                        <code>import { supabase } from "../supabase/client"</code> esto es la funcion principal de react
+                        <code class="lead">import { supabase } from "../supabase/client"</code> esto es la funcion principal de react
                         y se considera un "hook"
                     </p>
                     <p class="lead text-justify">
-                        Tambien podemos utilizar estados de <code>input</code> y demas componentes para
+                        Tambien podemos utilizar estados de <code class="lead">input</code> y demas componentes para
                         controlarlos muy parecido a como hariamos en kotlin por ejemplo con
-                        <code>onChange={(e) => setEmail(e.target.value)}</code> podremos recoger el email del usuario
+                        <code class="lead">onChange={(e) => setEmail(e.target.value)}</code> podremos recoger el email del usuario
                         para autenticarlo
                     </p>
                     <p class="lead text-justify">
                         Otro apartado muy importante de react y que utilizamos en nuestro proyecto es la gestion de
                         rutas y roles para esto utilizamos la dependencia <a
                             href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> que podemos
-                        agregar con <code>npm install react-router-dom</code> y podremos gestionar las rutas y roles de
+                        agregar con <code class="lead">npm install react-router-dom</code> y podremos gestionar las rutas y roles de
                         nuestra aplicacion, asi que en nuestra App.js que es como el main de nuestra aplicacion
                         agregaremos las rutas y en ella indicaremos las paginas que tenemos declarada en nuestra
                         carpeta/paquete para ser redireccionadas y la aplicacion sepa que pagina mostrar en funcion de
-                        la url. Tambien en la App.js con <code>navigate</code> (que es otra funcion de esta libreria)
+                        la url. Tambien en la App.js con <code class="lead">navigate</code> (que es otra funcion de esta libreria)
                         podremos navegar entre las rutas y asi en el caso de que el usuario no este autenticado
                         hacer que vaya una ruta especifica de esta forma no podra salir de hay hasta que no se
                         autentifique, de esta forma podemos hacer al gestion de roles de nuestra aplicacion.

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Antonio Martin Sosa</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/unicons.css">
+    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../images/Yo/favicon.ico" type="image/x-icon">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="../../css/tooplate-style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="lead navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="../../index.html#about" class="nav-link"><span data-hover="About">Sobre Mi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#project" class="nav-link"><span
+                                data-hover="Projects">Proyectos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#resume" class="nav-link"><span data-hover="Resume">Resumen</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#contact" class="nav-link"><span
+                                data-hover="Contact">Contactar</span></a>
+                    </li>
+                </ul>
+
+                <ul class="lead navbar-nav">
+                    <div class="color-mode">
+                        <i class="color-mode-icon"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 mx-auto">
+                    <div class="text-center">
+                        <h2 class="mb-4">Root en Android: Acceso Total al Sistema</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        <strong>Hacer root en un dispositivo Android</strong> significa obtener permisos de
+                        superusuario, lo que
+                        permite modificar y acceder a partes del sistema normalmente restringidas. Con acceso a
+                        <strong>root</strong>,
+                        puedes eliminar aplicaciones preinstaladas, mejorar el rendimiento, instalar software avanzado y
+                        realizar
+                        modificaciones profundas en el sistema operativo.
+                    </p>
+
+                    <h3>¿Por qué hacer root?</h3>
+                    <ul class="lead">
+                        <li><strong>Personalización total</strong>: Modifica el sistema, cambia la interfaz y elimina
+                            restricciones del fabricante.</li>
+                        <li><strong>Control del hardware</strong>: Overclocking del procesador, ajustes avanzados de
+                            batería y administración de memoria.</li>
+                        <li><strong>Automatización y seguridad</strong>: Uso de herramientas avanzadas en <a
+                                href="../SysAdmin/termux.html">Termux</a>
+                            para pruebas de seguridad y automatización.</li>
+                    </ul>
+
+                    <h3>Paso a paso general para hacer root en Android</h3>
+                    <p class="lead text-justify">
+                        Antes de comenzar, ten en cuenta que hacer root puede anular la garantía de tu dispositivo y, si
+                        se hace incorrectamente,
+                        puede causar fallos en el sistema. Para información específica según tu modelo, visita
+                        <a href="https://forum.xda-developers.com/" target="_blank">XDA Developers</a>.
+                    </p>
+
+                    <h4>1. Desbloquear el gestor de arranque (Bootloader)</h4>
+                    <p class="lead text-justify">
+                        La mayoría de los dispositivos Android vienen con el gestor de arranque bloqueado, lo que impide
+                        modificaciones en el sistema.
+                        Para desbloquearlo:
+                    </p>
+                    <ul class="lead">
+                        <li>Habilita <strong>Opciones de desarrollador</strong> y activa <strong>Desbloqueo OEM</strong>
+                            en los ajustes.</li>
+                        <li>Conecta el móvil al PC y usa <strong>fastboot</strong> desde una terminal:
+                            <code class="lead">fastboot oem unlock</code>
+                            (En algunos dispositivos puede variar, revisa <a href="https://forum.xda-developers.com/"
+                                target="_blank">XDA Forums</a>).
+                        </li>
+                    </ul>
+
+                    <h4>2. Instalar un recovery personalizado (TWRP)</h4>
+                    <p class="lead text-justify">
+                        El recovery personalizado permite flashear archivos como Magisk para rootear el sistema.
+                        Instálalo con el siguiente comando:
+                    </p>
+                    <code class="lead">fastboot flash recovery twrp.img</code>
+                    <p class="lead text-justify">Luego, inicia en modo recovery y asegúrate de que funciona
+                        correctamente.</p>
+
+                    <h4>3. Flashear Magisk para obtener Root</h4>
+                    <p class="lead text-justify">
+                        Magisk es la mejor opción para obtener root sin modificar el sistema. Descarga el archivo
+                        <strong>Magisk.zip</strong>,
+                        colócalo en la memoria del móvil y flashealo desde TWRP.
+                    </p>
+
+                    <h4>4. Verificar Root y configurar permisos</h4>
+                    <p class="lead text-justify">
+                        Una vez reiniciado, instala la aplicación <strong>Magisk Manager</strong> para gestionar los
+                        permisos de root.
+                        Puedes verificar que el proceso fue exitoso con la app <strong>Root Checker</strong>.
+                    </p>
+
+                    <h3>¿Más información?</h3>
+                    <p class="lead text-justify">
+                        Cada modelo de móvil tiene un proceso distinto, por lo que es recomendable buscar información
+                        específica en
+                        <a href="https://forum.xda-developers.com/" target="_blank">XDA Developers</a>, el mejor foro
+                        para guías y herramientas
+                        de rooteo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Curriculum diseñado y producido por Antonio Martin Sosa 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/Headroom.js"></script>
+    <script src="../../js/jQuery.headroom.js"></script>
+    <script src="../../js/owl.carousel.min.js"></script>
+    <script src="../../js/smoothscroll.js"></script>
+    <script src="../../js/custom.js"></script>
+
+</body>
+
+</html>
