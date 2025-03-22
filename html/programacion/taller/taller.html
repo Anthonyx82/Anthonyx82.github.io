@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Antonio Martin Sosa</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/unicons.css">
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="../../../css/tooplate-style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="lead navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
+                                Mi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#project" class="nav-link"><span
+                                data-hover="Projects">Proyectos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#resume" class="nav-link"><span
+                                data-hover="Resume">Resumen</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../index.html#contact" class="nav-link"><span
+                                data-hover="Contact">Contactar</span></a>
+                    </li>
+                </ul>
+
+                <ul class="lead navbar-nav">
+                    <div class="color-mode">
+                        <i class="color-mode-icon"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 mx-auto">
+                    <div class="text-center">
+                        <h2 class="mb-4">Gestión de Taller - Proyecto PFC</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        Este proyecto consiste en un sistema completo para la gestión de datos de vehículos a través de
+                        un lector OBD2 conectado a un ordenador cliente en Python.
+                        Los datos recogidos son enviados a una API en Python, que los persiste en base de datos y los
+                        pone a disposición de un frontend desarrollado en Angular 18.
+                        Desde la aplicación web, el usuario puede registrarse, iniciar sesión, gestionar sus vehículos y
+                        consultar las métricas recogidas. Todo el sistema está desplegado en Docker, con monitorización
+                        avanzada y acceso por subdominios.
+                    </p>
+                    <div class="text-center">
+                        <h2 class="mb-4">API Python</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        La API está desarrollada en FastAPI y se encarga de recibir los datos del cliente Python.
+                        Permite la gestión de usuarios, autenticación JWT y persistencia de vehículos y sus datos.
+                        Un ejemplo de endpoint para comprobar su funcionamiento es:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>- <code>@app.get("/saludo")</code> devuelve un mensaje simple para testear conectividad.
+                        </li>
+                        <li>- Toda la API está disponible en el repositorio:
+                            <a class="lead"
+                                href="https://github.com/Anthonyx82/GestionTallerPFC/blob/main/taller-back-api/main.py">Ver
+                                código API</a>
+                        </li><br>
+                    </ul>
+                    <div class="text-center">
+                        <h2 class="mb-4">Cliente Python (OBD2)</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        El cliente Python se conecta mediante un dispositivo OBD2 ELM327 al vehículo y obtiene datos de
+                        sensores importantes como velocidad, RPM, temperatura del motor, etc.
+                        La biblioteca <code>obd</code> permite realizar llamadas de este tipo:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>- <code>obd.commands.RPM</code> para obtener las revoluciones del motor.</li>
+                        <li>- El cliente recoge estos datos y los envía automáticamente a la API.</li>
+                        <li>- Repositorio con el código completo:
+                            <a class="lead"
+                                href="https://github.com/Anthonyx82/GestionTallerPFC/blob/main/taller-back-api/client.py">Ver
+                                cliente
+                                OBD2</a>
+                        </li><br>
+                    </ul>
+                    <div class="text-center">
+                        <h2 class="mb-4">Frontend Angular 18</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        La aplicación frontend en Angular 18 permite al usuario registrarse, iniciar sesión y consultar
+                        todos los datos recogidos por el cliente Python.
+                        Desde el panel, el usuario puede añadir, editar o eliminar vehículos y visualizar las métricas
+                        almacenadas.
+                        La comunicación con la API se realiza mediante peticiones HTTP seguras.
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>- Registro y login con token JWT almacenado en localStorage.</li>
+                        <li>- Visualización de vehículos en tablas dinámicas.</li>
+                        <li>- Interfaz limpia y adaptada a cualquier dispositivo.</li>
+                        <li>- El proyecto Angular completo se encuentra aquí:
+                            <a class="lead"
+                                href="https://github.com/Anthonyx82/GestionTallerPFC/tree/main/taller-front">Ver
+                                Frontend Angular</a>
+                        </li><br>
+                    </ul>
+                    <div class="text-center">
+                        <h2 class="mb-4">Despliegue y Arquitectura General</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        Todo el proyecto se encuentra orquestado mediante Docker y accesible a través de subdominios con
+                        Traefik.
+                        La API y el frontend están expuestos públicamente usando HTTPS y subdominios personalizados.
+                        El cliente OBD2 corre de forma local en el equipo conectado al vehículo.
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>- Frontend: <a class="lead"
+                                href="https://anthonyx82.ddns.net/taller-front/">https://anthonyx82.ddns.net/taller-front/</a>
+                        </li>
+                        <li>- API: <a class="lead"
+                                href="https://anthonyx82.ddns.net/taller/api/saludo">https://anthonyx82.ddns.net/taller/api/saludo</a>
+                        </li>
+                        <li>- Docker Compose, configuración de Traefik y servicios están en el repositorio:
+                            <a class="lead" href="https://github.com/Anthonyx82/GestionTallerPFC/tree/main">Ver
+                                configuración Docker & Traefik</a>
+                        </li><br>
+                    </ul>
+                    <div class="text-center">
+                        <h2 class="mb-4">Integración con DevOps</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        Todo este proyecto está acompañado de una infraestructura DevOps robusta. A continuación puedes
+                        ver los apartados dedicados a cada herramienta, donde se explica en detalle cómo están
+                        configuradas y utilizadas:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>- Traefik (proxy inverso, enrutamiento y certificados SSL) - <a class="lead"
+                                href="../../SysAdmin/inverso.html#traefik">Ver sección Traefik</a></li>
+                        <li>- Docker y Docker Compose (orquestación de servicios) - <a class="lead"
+                                href="../../SysAdmin/inverso.html#docker">Ver sección Docker</a></li>
+                        <li>- Prometheus (monitorización de métricas) - <a class="lead"
+                                href="../../SysAdmin/inverso.html#prometheus">Ver sección Prometheus</a></li>
+                        <li>- Jaeger (distributed tracing) - <a class="lead" href="../../SysAdmin/inverso.html">Ver
+                                sección Jaeger</a></li>
+                        <li>- Uptime Kuma (monitorización de disponibilidad y página de estado) - <a class="lead"
+                                href="../../SysAdmin/inverso.html#kuma">Ver sección Uptime Kuma</a></li>
+                        <li>- Glances (monitorización del rendimiento del servidor) - <a class="lead"
+                                href="../../SysAdmin/inverso.html#glances">Ver sección Glances</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Curriculum diseñado y producido por Antonio Martin Sosa 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/Headroom.js"></script>
+    <script src="../../../js/jQuery.headroom.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/smoothscroll.js"></script>
+    <script src="../../../js/custom.js"></script>
+
+</body>
+
+</html>
