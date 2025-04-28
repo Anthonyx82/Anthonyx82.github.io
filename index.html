@@ -10,18 +10,25 @@
 
   <title>Antonio Martin Sosa</title>
 
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/unicons.css" />
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <!-- Preload CSS -->
+  <link rel="preload" href="css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/unicons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="css/tooplate-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for no-JS users -->
+  <noscript>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/unicons.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/tooplate-style.css">
+  </noscript>
 
   <!-- FAVICON -->
   <link rel="icon" href="images/Yo/favicon.ico" type="image/x-icon" />
-
-  <!-- MAIN STYLE -->
-  <link rel="stylesheet" href="css/tooplate-style.css" />
 </head>
-
 <body>
   <!-- MENU -->
   <nav class="navbar navbar-expand-sm navbar-light">
