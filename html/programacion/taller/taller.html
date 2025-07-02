@@ -70,115 +70,239 @@
             <div class="row">
                 <div class="col-lg-10 col-md-10 mx-auto">
                     <div class="text-center">
-                        <h2 class="mb-4">Gestión de Taller - Proyecto PFC</h2>
+                        <h2 class="mb-4">Desarrollo del Proyecto</h2>
                     </div>
+
                     <p class="lead text-justify">
-                        Este proyecto consiste en un sistema completo para la gestión de datos de vehículos a través de
-                        un lector OBD2 conectado a un ordenador cliente en Python.
-                        Los datos recogidos son enviados a una API en Python, que los persiste en base de datos y los
-                        pone a disposición de un frontend desarrollado en Angular 18.
-                        Desde la aplicación web, el usuario puede registrarse, iniciar sesión, gestionar sus vehículos y
-                        consultar las métricas recogidas. Todo el sistema está desplegado en Docker, con monitorización
-                        avanzada y acceso por subdominios.
+                        Este proyecto ha sido diseñado con una arquitectura modular distribuida, compuesta por tres
+                        capas
+                        independientes:
+                        una aplicación cliente en Python que se conecta a un vehículo vía OBD2, una API REST
+                        desarrollada
+                        con FastAPI y una aplicación web frontend en Angular 18.
+                        Cada componente ha sido creado bajo principios de escalabilidad, mantenibilidad y seguridad.
                     </p>
+
                     <div class="text-center">
-                        <h2 class="mb-4">API Python</h2>
+                        <h2 class="mb-4">Casos de Uso y Escenarios Prácticos</h2>
                     </div>
                     <p class="lead text-justify">
-                        La API está desarrollada en FastAPI y se encarga de recibir los datos del cliente Python.
-                        Permite la gestión de usuarios, autenticación JWT y persistencia de vehículos y sus datos.
-                        Un ejemplo de endpoint para comprobar su funcionamiento es:
+                        El sistema ha sido diseñado para adaptarse a distintos tamaños de talleres mecánicos,
+                        permitiendo una implementación
+                        flexible, eficiente y rentable. A continuación, se resumen los escenarios más comunes de uso
+                        real:
+                    </p>
+
+                    <ul class="lead text-justify">
+                        <li>🔧 <strong>Taller pequeño (1–3 mecánicos):</strong> instalación local en un único equipo con
+                            el cliente OBD2,
+                            interfaz web para diagnóstico básico y generación de informes desde el mismo dispositivo.
+                        </li>
+                        <li>🔧 <strong>Taller mediano (4–10 mecánicos):</strong> servidor local centralizado que conecta
+                            múltiples
+                            pantallas, cada una asociada a un mecánico. Permite gestión simultánea de vehículos y
+                            coordinación de informes.
+                        </li>
+                        <li>🔧 <strong>Taller grande (+10 mecánicos):</strong> infraestructura escalada con contenedores
+                            distribuidos,
+                            control de acceso por usuario, múltiples clientes OBD2, y uso intensivo de trazabilidad e
+                            informes.</li>
+                    </ul>
+                    <p class="lead text-justify">
+                        Además, el sistema incluye:
                     </p>
                     <ul class="lead text-justify">
-                        <li>- <code>@app.get("/saludo")</code> devuelve un mensaje simple para testear conectividad.
+                        <li>📩 Envío automático de informes por email al cliente con acceso seguro por token único.</li>
+                        <li>📘 Guía paso a paso para diagnósticos basada en errores OBD-II detectados.</li>
+                        <li>🔄 Historial completo de intervenciones para cada vehículo, con opción de aceptación/rechazo
+                            por parte del
+                            cliente.</li>
+                    </ul>
+
+                    <div class="text-center">
+                        <h2 class="mb-4">Seguridad del Sistema</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        La seguridad ha sido un pilar desde la concepción del proyecto. Se aplicaron buenas prácticas en
+                        todos los niveles,
+                        desde el backend hasta la infraestructura de red:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>🔒 <strong>Contraseñas:</strong> almacenadas con hashing robusto (bcrypt) mediante
+                            <code>passlib</code>.
                         </li>
-                        <li>- Toda la API está disponible en el repositorio:
+                        <li>🔐 <strong>Autenticación:</strong> basada en JWT, con control de expiración y validación por
+                            roles.</li>
+                        <li>🔑 <strong>Tokens UUID:</strong> para compartir informes de forma segura con el cliente.
+                        </li>
+                        <li>🧾 <strong>Variables sensibles:</strong> gestionadas mediante archivos <code>.env</code>
+                            fuera del repositorio.
+                        </li>
+                        <li>🌐 <strong>Comunicación cifrada:</strong> todo el tráfico usa HTTPS con certificados SSL
+                            gestionados por
+                            <code>Traefik</code> y Let's Encrypt.
+                        </li>
+                        <li>🚫 <strong>Protección contra ataques:</strong> mitigación de SQL Injection, XSS y fuerza
+                            bruta mediante
+                            integración con Fail2Ban y el uso de Angular.</li>
+                        <li>📈 <strong>Trazabilidad:</strong> integración con Prometheus y Jaeger para detectar patrones
+                            sospechosos y
+                            diagnósticos anómalos.</li>
+                    </ul>
+
+                    <div class="text-center">
+                        <h2 class="mb-4">Estrategia de Pruebas y Validación</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        El proyecto ha sido validado exhaustivamente mediante múltiples capas de pruebas, asegurando su
+                        fiabilidad en
+                        entornos reales:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>✅ <strong>Pruebas unitarias:</strong> desarrolladas con <code>pytest</code> para validar los
+                            endpoints y la
+                            lógica del backend.</li>
+                        <li>🔗 <strong>Pruebas de integración:</strong> entre cliente, API y base de datos para
+                            garantizar la coherencia de
+                            los flujos.</li>
+                        <li>📊 <strong>Pruebas de rendimiento:</strong> realizadas con herramientas como
+                            <code>Locust</code> para evaluar el
+                            comportamiento ante carga alta.
+                        </li>
+                        <li>🧩 <strong>Entornos diferenciados:</strong> desarrollo, staging y producción, con control de
+                            versiones y
+                            rollback seguro mediante Docker.</li>
+                        <li>🚗 <strong>Validación con hardware real:</strong> pruebas con adaptadores OBD2 en múltiples
+                            modelos de
+                            vehículos, verificando la estabilidad del cliente.</li>
+                        <li>👀 <strong>Pruebas manuales de UI:</strong> simulación de flujos completos desde la lectura
+                            del vehículo hasta
+                            el envío del informe por correo.</li>
+                    </ul>
+                    <p class="lead text-justify">
+                        Este enfoque permite mantener una alta calidad en cada entrega del sistema y facilita el
+                        mantenimiento evolutivo del
+                        proyecto.
+                    </p>
+
+                    <!-- API Section -->
+                    <div class="text-center">
+                        <h2 class="mb-4">API REST en Python (FastAPI)</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        La API es el núcleo del sistema. Está desarrollada con <strong>FastAPI</strong> e implementa
+                        autenticación con <code>JWT</code>, validación de datos con <code>Pydantic</code>, y gestión ORM
+                        con
+                        <code>SQLAlchemy</code>. Expone múltiples endpoints para la gestión de usuarios, vehículos,
+                        errores
+                        OBD-II e informes técnicos.
+                    </p>
+                    <ul class="lead text-justify">
+                        <li>🔐 Autenticación segura con tokens JWT y control de acceso.</li>
+                        <li>📋 Endpoints RESTful para CRUD de vehículos, errores e informes.</li>
+                        <li>📨 Envío automático de informes por correo con <code>FastAPI-Mail</code>.</li>
+                        <li>🧪 Validación exhaustiva de datos gracias a Pydantic.</li>
+                        <li>📄 Documentación Swagger accesible desde <code>/docs</code>.</li>
+                        <li>🔧 Código disponible en GitHub:
                             <a class="lead"
                                 href="https://github.com/Anthonyx82/GestionTallerPFC/blob/main/taller-back-api/main.py">Ver
                                 código API</a>
-                        </li><br>
+                        </li>
                     </ul>
+
+                    <!-- Python Client Section -->
                     <div class="text-center">
-                        <h2 class="mb-4">Cliente Python (OBD2)</h2>
+                        <h2 class="mb-4">Cliente de Diagnóstico (Python + OBD2)</h2>
                     </div>
                     <p class="lead text-justify">
-                        El cliente Python se conecta mediante un dispositivo OBD2 ELM327 al vehículo y obtiene datos de
-                        sensores importantes como velocidad, RPM, temperatura del motor, etc.
-                        La biblioteca <code>obd</code> permite realizar llamadas de este tipo:
+                        La aplicación cliente se comunica directamente con el vehículo usando un adaptador OBD2 ELM327.
+                        Ha
+                        sido desarrollada en Python, con una interfaz gráfica simple usando <code>Tkinter</code>, y se
+                        distribuye como ejecutable para Windows mediante <code>PyInstaller</code>.
                     </p>
                     <ul class="lead text-justify">
-                        <li>- <code>obd.commands.RPM</code> para obtener las revoluciones del motor.</li>
-                        <li>- El cliente recoge estos datos y los envía automáticamente a la API.</li>
-                        <li>- Repositorio con el código completo:
+                        <li>⚙️ Captura de datos en tiempo real: RPM, velocidad, temperatura, errores DTC.</li>
+                        <li>📤 Comunicación directa con la API vía <code>requests</code>.</li>
+                        <li>🔁 Envío automático de datos periódicos para almacenamiento y análisis.</li>
+                        <li>💻 Compatible con Windows 7 en adelante, sin dependencias externas.</li>
+                        <li>🔗 Código fuente disponible:
                             <a class="lead"
                                 href="https://github.com/Anthonyx82/GestionTallerPFC/blob/main/taller-back-api/client.py">Ver
-                                cliente
-                                OBD2</a>
-                        </li><br>
+                                cliente OBD2</a>
+                        </li>
                     </ul>
+
+                    <!-- Frontend Angular -->
                     <div class="text-center">
-                        <h2 class="mb-4">Frontend Angular 18</h2>
+                        <h2 class="mb-4">Interfaz Web (Frontend Angular 18)</h2>
                     </div>
                     <p class="lead text-justify">
-                        La aplicación frontend en Angular 18 permite al usuario registrarse, iniciar sesión y consultar
-                        todos los datos recogidos por el cliente Python.
-                        Desde el panel, el usuario puede añadir, editar o eliminar vehículos y visualizar las métricas
-                        almacenadas.
-                        La comunicación con la API se realiza mediante peticiones HTTP seguras.
+                        La aplicación web permite gestionar toda la información del sistema de forma intuitiva.
+                        Desarrollada
+                        en Angular 18, proporciona una experiencia fluida tanto en escritorio como en móviles.
                     </p>
                     <ul class="lead text-justify">
-                        <li>- Registro y login con token JWT almacenado en localStorage.</li>
-                        <li>- Visualización de vehículos en tablas dinámicas.</li>
-                        <li>- Interfaz limpia y adaptada a cualquier dispositivo.</li>
-                        <li>- El proyecto Angular completo se encuentra aquí:
+                        <li>🧑‍🔧 Registro de usuarios, login con JWT y control de sesión.</li>
+                        <li>🚗 Gestión completa de vehículos, errores e informes técnicos.</li>
+                        <li>📊 Visualización de métricas en tablas y paneles dinámicos.</li>
+                        <li>📎 Generación de informes en PDF desde el navegador con <code>html2pdf.js</code>.</li>
+                        <li>🎨 Diseño responsive con Angular Material.</li>
+                        <li>🌐 Repositorio:
                             <a class="lead"
                                 href="https://github.com/Anthonyx82/GestionTallerPFC/tree/main/taller-front">Ver
                                 Frontend Angular</a>
-                        </li><br>
+                        </li>
                     </ul>
+
+                    <!-- Infraestructura -->
                     <div class="text-center">
                         <h2 class="mb-4">Despliegue y Arquitectura General</h2>
                     </div>
                     <p class="lead text-justify">
-                        Todo el proyecto se encuentra orquestado mediante Docker y accesible a través de subdominios con
-                        Traefik.
-                        La API y el frontend están expuestos públicamente usando HTTPS y subdominios personalizados.
-                        El cliente OBD2 corre de forma local en el equipo conectado al vehículo.
+                        Todo el sistema está contenedorizado con <code>Docker</code> y se expone mediante
+                        <code>Traefik</code> como proxy inverso, con subdominios personalizados para cada servicio. La
+                        solución permite un despliegue ágil y seguro, ideal para talleres pequeños sin conocimientos
+                        técnicos avanzados.
                     </p>
                     <ul class="lead text-justify">
-                        <li>- Frontend: <a class="lead"
+                        <li>🔗 Frontend: <a class="lead"
                                 href="https://anthonyx82.ddns.net/taller-front/">https://anthonyx82.ddns.net/taller-front/</a>
                         </li>
-                        <li>- API: <a class="lead"
+                        <li>🔗 API: <a class="lead"
                                 href="https://anthonyx82.ddns.net/taller/api/saludo">https://anthonyx82.ddns.net/taller/api/saludo</a>
                         </li>
-                        <li>- Docker Compose, configuración de Traefik y servicios están en el repositorio:
+                        <li>⚙️ Configuración completa:
                             <a class="lead" href="https://github.com/Anthonyx82/GestionTallerPFC/tree/main">Ver
                                 configuración Docker & Traefik</a>
-                        </li><br>
+                        </li>
                     </ul>
+
+                    <!-- DevOps Section (sin cambios importantes) -->
                     <div class="text-center">
                         <h2 class="mb-4">Integración con DevOps</h2>
                     </div>
                     <p class="lead text-justify">
-                        Todo este proyecto está acompañado de una infraestructura DevOps robusta. A continuación puedes
-                        ver los apartados dedicados a cada herramienta, donde se explica en detalle cómo están
-                        configuradas y utilizadas:
+                        El proyecto incorpora herramientas modernas de DevOps que aseguran trazabilidad, automatización
+                        y
+                        control del estado del sistema. A continuación puedes ver los apartados detallados para cada
+                        componente:
                     </p>
                     <ul class="lead text-justify">
-                        <li>- Traefik (proxy inverso, enrutamiento y certificados SSL) - <a class="lead"
-                                href="../../SysAdmin/inverso.html#traefik">Ver sección Traefik</a></li>
-                        <li>- Docker y Docker Compose (orquestación de servicios) - <a class="lead"
-                                href="../../SysAdmin/inverso.html#docker">Ver sección Docker</a></li>
-                        <li>- Prometheus (monitorización de métricas) - <a class="lead"
-                                href="../../SysAdmin/inverso.html#prometheus">Ver sección Prometheus</a></li>
-                        <li>- Jaeger (distributed tracing) - <a class="lead" href="../../SysAdmin/inverso.html">Ver
-                                sección Jaeger</a></li>
-                        <li>- Uptime Kuma (monitorización de disponibilidad y página de estado) - <a class="lead"
-                                href="../../SysAdmin/inverso.html#kuma">Ver sección Uptime Kuma</a></li>
-                        <li>- Glances (monitorización del rendimiento del servidor) - <a class="lead"
+                        <li>- Traefik (proxy inverso) - <a class="lead" href="../../SysAdmin/inverso.html#traefik">Ver
+                                sección Traefik</a></li>
+                        <li>- Docker y Docker Compose - <a class="lead" href="../../SysAdmin/inverso.html#docker">Ver
+                                sección Docker</a></li>
+                        <li>- Prometheus (métricas) - <a class="lead" href="../../SysAdmin/inverso.html#prometheus">Ver
+                                sección Prometheus</a></li>
+                        <li>- Jaeger (tracing) - <a class="lead" href="../../SysAdmin/inverso.html">Ver sección
+                                Jaeger</a>
+                        </li>
+                        <li>- Uptime Kuma (uptime monitor) - <a class="lead" href="../../SysAdmin/inverso.html#kuma">Ver
+                                sección Uptime Kuma</a></li>
+                        <li>- Glances (monitorización del servidor) - <a class="lead"
                                 href="../../SysAdmin/inverso.html#glances">Ver sección Glances</a></li>
                     </ul>
+
                 </div>
             </div>
         </div>
