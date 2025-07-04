@@ -1,0 +1,99 @@
+/* blog.css - Estilos modernos para Blog 82 con soporte para modo oscuro */
+
+:root {
+    --blog-bg-light: #f8f9fa;
+    --blog-bg-dark: #1e1e1e;
+    --blog-text-light: #333;
+    --blog-text-dark: #e0e0e0;
+    --blog-card-shadow-light: rgba(0, 0, 0, 0.08);
+    --blog-card-shadow-dark: rgba(255, 255, 255, 0.05);
+    --blog-accent-color: #0d6efd;
+}
+
+/* Estilo base para cada entrada del blog */
+.blog-entry {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--blog-bg-light);
+    box-shadow: 0 6px 16px var(--blog-card-shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode .blog-entry {
+    background-color: var(--blog-bg-dark);
+    box-shadow: 0 6px 16px var(--blog-card-shadow-dark);
+}
+
+.blog-entry:hover {
+    transform: translateY(-4px);
+    background-color: #ffc200;
+}
+
+/* Imágenes */
+.blog-entry img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.blog-entry img:hover {
+    filter: brightness(1.1);
+}
+
+/* Contenido */
+.blog-content {
+    padding: 2rem;
+}
+
+.blog-content h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--blog-text-light);
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: var(--blog-text-light);
+}
+
+.blog-entry:hover .blog-content h3,
+.blog-entry:hover .blog-content p {
+    color: #1a1a1a;
+}
+
+body.dark-mode .blog-entry:hover .blog-content h3,
+body.dark-mode .blog-entry:hover .blog-content p {
+    color: #1a1a1a;
+}
+
+/* Botón */
+.blog-content .btn {
+    display: none;
+}
+
+/* Alternancia visual para secciones */
+.blog-entry.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .blog-entry {
+        flex-wrap: nowrap;
+    }
+
+    .blog-entry img {
+        width: 40%;
+        height: 100%;
+    }
+
+    .blog-content {
+        width: 60%;
+    }
+}
