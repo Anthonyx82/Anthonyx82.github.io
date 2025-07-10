@@ -24,12 +24,13 @@
 <body>
 
     <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light" role="navigation" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+            <a class="navbar-brand" href="../../../index.html" aria-label="Inicio - Antonio Martin"><i
+                    class='uil uil-user'></i>Antonio Martin</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -38,27 +39,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
-                                Mi</span></a>
+                        <a href="../../../index.html#about" class="nav-link" aria-label="Sobre Mi"><span
+                                data-hover="About">Sobre Mi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#project" class="nav-link"><span
+                        <a href="../../../index.html#project" class="nav-link" aria-label="Proyectos"><span
                                 data-hover="Projects">Proyectos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#resume" class="nav-link"><span
+                        <a href="../../../index.html#resume" class="nav-link" aria-label="Resumen"><span
                                 data-hover="Resume">Resumen</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#contact" class="nav-link"><span
+                        <a href="../../../index.html#contact" class="nav-link" aria-label="Contactar"><span
                                 data-hover="Contact">Contactar</span></a>
                     </li>
                 </ul>
 
                 <ul class="lead navbar-nav">
-                    <div class="color-mode">
-                        <i class="color-mode-icon"></i>
-                    </div>
+                    <li>
+                        <button class="color-mode" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                            <i class="color-mode-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>

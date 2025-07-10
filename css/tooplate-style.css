@@ -313,6 +313,7 @@ strong {
 }
 
 .color-mode {
+  all: unset;
   font-weight: bold;
   cursor: pointer;
 }

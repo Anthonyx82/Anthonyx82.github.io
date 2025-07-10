@@ -1,35 +1,105 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
+
+    <!-- Viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Antonio Martin Sosa</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2.">
 
+    <!-- Autor -->
+    <meta name="author" content="Antonio Martín Sosa">
+
+    <!-- Keywords (aunque Google ya no las usa mucho, no está de más) -->
+    <meta name="keywords"
+        content="handshake, Wi-Fi, WPA, WPA2, redes inalámbricas, seguridad informática, ciberseguridad">
+
+    <!-- Canonical URL para evitar duplicados -->
+    <link rel="canonical" href="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
+
+    <!-- Título -->
+    <title>¿Qué es el Handshake? | Antonio Martín Sosa</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph para redes sociales -->
+    <meta property="og:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
+    <meta property="og:description"
+        content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
+    <meta property="og:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
+    <meta property="og:site_name" content="Antonio Martín Sosa" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
+    <meta name="twitter:description"
+        content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2." />
+    <meta name="twitter:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
+    <meta name="twitter:site" content="@Anthonyx82_ttv" />
+    <meta name="twitter:creator" content="@Anthonyx82_ttv" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+
+    <!-- Schema.org (JSON-LD) para artículo -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "¿Qué es el Handshake?",
+      "description": "Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2.",
+      "author": {
+        "@type": "Person",
+        "name": "Antonio Martín Sosa"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Antonio Martín Sosa",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.tudominio.com/images/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.tudominio.com/handshake-wifi"
+      },
+      "datePublished": "2025-07-10",
+      "dateModified": "2025-07-10",
+      "image": "https://www.tudominio.com/images/handshake-preview.jpg"
+    }
+    </script>
+
+    <!-- Preload fonts o recursos críticos si tienes -->
+    <!-- Ejemplo: <link rel="preload" href="path/font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+    <!-- Enlaces CSS -->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/unicons.css">
     <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
-
-    <!-- FAVICON -->
-    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
-
-    <!-- MAIN STYLE -->
     <link rel="stylesheet" href="../../../css/tooplate-style.css">
+
 </head>
 
 <body>
 
     <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light" role="navigation" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+            <a class="navbar-brand" href="../../../index.html" aria-label="Inicio - Antonio Martin"><i
+                    class='uil uil-user'></i>Antonio Martin</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -38,78 +108,84 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre Mi</span></a>
+                        <a href="../../../index.html#about" class="nav-link" aria-label="Sobre Mi"><span
+                                data-hover="About">Sobre Mi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#project" class="nav-link"><span data-hover="Projects">Proyectos</span></a>
+                        <a href="../../../index.html#project" class="nav-link" aria-label="Proyectos"><span
+                                data-hover="Projects">Proyectos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#resume" class="nav-link"><span data-hover="Resume">Resumen</span></a>
+                        <a href="../../../index.html#resume" class="nav-link" aria-label="Resumen"><span
+                                data-hover="Resume">Resumen</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#contact" class="nav-link"><span data-hover="Contact">Contactar</span></a>
+                        <a href="../../../index.html#contact" class="nav-link" aria-label="Contactar"><span
+                                data-hover="Contact">Contactar</span></a>
                     </li>
                 </ul>
 
                 <ul class="lead navbar-nav">
-                    <div class="color-mode">
-                        <i class="color-mode-icon"></i>
-                    </div>
+                    <li>
+                        <button class="color-mode" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                            <i class="color-mode-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- FEATURES -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-9 col-md-10 mx-auto">
-                    <div class="text-center">
-                        <h2 class="mb-4">Que es handshake?</h2>
-                    </div>
-                    <p class="lead text-justify">
-                        En el contexto de las redes Wi-Fi protegidas con WPA/WPA2, el handshake es el proceso de
-                        intercambio de mensajes
-                        entre un dispositivo cliente (como una computadora portátil, un teléfono inteligente u otro
-                        dispositivo conectado
-                        a la red) y el punto de acceso (router) de la red Wi-Fi.
-                    </p>
-                    <p class="lead text-justify">
-                        Cuando un dispositivo cliente intenta conectarse a una red Wi-Fi protegida, el punto de acceso
-                        envía un desafío al
-                        dispositivo para verificar su identidad. El dispositivo cliente responde a este desafío con
-                        información de
-                        autenticación y, si la autenticación es exitosa, se establece la conexión a la red. Este
-                        intercambio de mensajes
-                        entre el dispositivo cliente y el punto de acceso se conoce como "handshake".
-                    </p>
-                    <p class="lead text-justify">
-                        El handshake capturado contiene información importante que puede utilizarse para realizar
-                        ataques de cracking de
-                        contraseñas en la red Wi-Fi. Este handshake capturado es crucial para intentar descifrar la
-                        contraseña de la red
-                        mediante técnicas de fuerza bruta o de diccionario. Por lo tanto, el proceso de capturar y
-                        utilizar el handshake
-                        es fundamental en muchos ataques contra redes Wi-Fi protegidas.
-                    </p>
+    <!-- SECCIÓN: HANDSHAKE -->
+    <main>
+        <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+            <div class="container">
+                <div class="row">
+                    <article class="col-lg-9 col-md-10 mx-auto">
+                        <header class="text-center">
+                            <h1 class="mb-4">¿Qué es el Handshake?</h1>
+                        </header>
+                        <p class="lead text-justify">
+                            En el contexto de las redes Wi-Fi protegidas con WPA/WPA2, el <em>handshake</em> es el
+                            proceso de
+                            intercambio de mensajes entre un dispositivo cliente (como un ordenador portátil, un
+                            teléfono
+                            inteligente u otro dispositivo conectado a la red) y el punto de acceso (router) de dicha
+                            red.
+                        </p>
+                        <p class="lead text-justify">
+                            Cuando un dispositivo intenta conectarse a una red Wi-Fi protegida, el punto de acceso le
+                            envía un
+                            desafío para verificar su identidad. El dispositivo responde con información de
+                            autenticación y,
+                            si esta es válida, se establece la conexión. Este intercambio se denomina "handshake".
+                        </p>
+                        <p class="lead text-justify">
+                            Un <em>handshake</em> capturado puede contener información útil para intentar descifrar la
+                            contraseña
+                            de la red, mediante técnicas como fuerza bruta o ataques de diccionario. Por ello, es una
+                            parte
+                            crítica en los ataques dirigidos a redes Wi-Fi protegidas.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer py-5">
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer py-5 bg-light" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
-                    <p class="copyright-text text-center">Curriculum diseñado y producido por Antonio Martin Sosa 2025
-                    </p>
+                    <p class="text-center text-muted">Currículum diseñado y producido por Antonio Martín Sosa &copy;
+                        2025</p>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- SCRIPTS -->
     <script src="../../../js/jquery-3.3.1.min.js"></script>
     <script src="../../../js/popper.min.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>

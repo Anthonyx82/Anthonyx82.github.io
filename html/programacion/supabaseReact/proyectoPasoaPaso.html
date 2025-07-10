@@ -24,12 +24,13 @@
 <body>
 
     <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light" role="navigation" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+            <a class="navbar-brand" href="../../../index.html" aria-label="Inicio - Antonio Martin"><i
+                    class='uil uil-user'></i>Antonio Martin</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -38,27 +39,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
-                                Mi</span></a>
+                        <a href="../../../index.html#about" class="nav-link" aria-label="Sobre Mi"><span
+                                data-hover="About">Sobre Mi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#project" class="nav-link"><span
+                        <a href="../../../index.html#project" class="nav-link" aria-label="Proyectos"><span
                                 data-hover="Projects">Proyectos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#resume" class="nav-link"><span
+                        <a href="../../../index.html#resume" class="nav-link" aria-label="Resumen"><span
                                 data-hover="Resume">Resumen</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#contact" class="nav-link"><span
+                        <a href="../../../index.html#contact" class="nav-link" aria-label="Contactar"><span
                                 data-hover="Contact">Contactar</span></a>
                     </li>
                 </ul>
 
                 <ul class="lead navbar-nav">
-                    <div class="color-mode">
-                        <i class="color-mode-icon"></i>
-                    </div>
+                    <li>
+                        <button class="color-mode" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                            <i class="color-mode-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -112,7 +115,8 @@
                             sesiones de usuario de forma segura.</li><br>
                         <li>- Storage. Supabase proporciona un servicio de almacenamiento de
                             archivos, que utiliza
-                            almacenamiento en la nube (como <a class="lead" href="https://aws.amazon.com/s3/">AWS S3</a>) para
+                            almacenamiento en la nube (como <a class="lead" href="https://aws.amazon.com/s3/">AWS
+                                S3</a>) para
                             almacenar los archivos de los usuarios.</li><br>
                         <li>- <a class="lead" href="https://graphql.org/">GraphQL</a>. Supabase ofrece soporte
                             para GraphQL, lo que
@@ -124,12 +128,15 @@
                     </ul>
                     <p class="lead text-justify">
                         Gracias a estas tecnologias supabase nos proporciana funciones de autenticación del usuario como
-                        puede ser <code class="lead"> supabase.auth.getUser() </code>la cual nos da en JSON toda la informacion
-                        acerca del usuario que esta autenticado o <code class="lead"> supabase.auth.signOut() </code> que nos permite
+                        puede ser <code class="lead"> supabase.auth.getUser() </code>la cual nos da en JSON toda la
+                        informacion
+                        acerca del usuario que esta autenticado o <code class="lead"> supabase.auth.signOut() </code>
+                        que nos permite
                         deslogear al usuario en cualquier contexto
                     </p>
                     <p class="lead text-justify">
-                        Tambien podemos utilizar <code class="lead"> supabase.from("tabla") </code> que nos permite seleccionar
+                        Tambien podemos utilizar <code class="lead"> supabase.from("tabla") </code> que nos permite
+                        seleccionar
                         cualquier tabla de la base de datos para poder hacer operaciones crud en ella
                     </p>
                     <ul class="lead text-justify">
@@ -144,7 +151,8 @@
                         utilizando la funcion <code class="lead">.eq()</code>
                     </p>
                     <p class="lead text-justify">
-                        Y el resultado de la operacion la podemos recoger añadiendo la funcion <code class="lead"> .select() </code>
+                        Y el resultado de la operacion la podemos recoger añadiendo la funcion <code
+                            class="lead"> .select() </code>
                         al final de la sentencia. Por ejemplo para añadir una tarea en nuestro proyecto y recoger el
                         resultado de la operacion haremos lo siguiente:
                     </p>
@@ -159,7 +167,8 @@
                     <p class="lead text-justify">
                         Como podemos ver se recoje el usuario para hacer el insert de la tarea con su usuario insertado,
                         y hacemos el insert dentro de la tabla "tasks", y para recoger el resultado y guardar el
-                        <code class="lead">{data, error}</code> de este utilizamos la sentencia <code class="lead"> .select() </code> al
+                        <code class="lead">{data, error}</code> de este utilizamos la sentencia <code
+                            class="lead"> .select() </code> al
                         final
                     </p>
                     <p class="lead text-justify">
@@ -220,9 +229,11 @@
                         De esta forma ya sabemos como podemos hacer cualquier operacion realacionada con la base de
                         datos, subida de archivos y con la autenticacion del ususario, si quieres saber mas informacion
                         puedes encontrar
-                        cualquier cosa sobre supabase en su <a class="lead" href="https://supabase.com/docs">documentacion</a> que
+                        cualquier cosa sobre supabase en su <a class="lead"
+                            href="https://supabase.com/docs">documentacion</a> que
                         esta muy bien explicada y te sera muy sencillo encontrarlo. Por ultimo, es interesante revisar
-                        la <a class="lead" href="https://supabase.com/docs">documentacion</a> periodicamente ya que hacen bastantes
+                        la <a class="lead" href="https://supabase.com/docs">documentacion</a> periodicamente ya que
+                        hacen bastantes
                         cambios de una version a otra
                     </p>
                     <div class="text-center">
@@ -241,7 +252,7 @@
                         arreglar una moto sabe arreglar una bici"
                     </p>
                     <div class="text-center">
-                        <h3 id="javascript" class="mb-4">Como funciona javascript?</h3>
+                        <h3 id="javascript">Como funciona javascript?</h3>
                     </div>
                     <p class="lead text-justify">
                         Entonces, ¿qué es JavaScript? ¿Y cómo funciona? <a
@@ -251,7 +262,8 @@
                         diferencia de <a class="lead" href="../DesarrolloWeb.html#html">HTML</a> y <a
                             href="../DesarrolloWeb.html#css">CSS</a>, que se utilizan para la estructura y el diseño de
                         una página, JavaScript permite que los desarrolladores implementen funcionalidades interactivas,
-                        como la manipulación del <a class="lead" href="../DesarrolloWeb.html#dom">DOM</a>, la validación de
+                        como la manipulación del <a class="lead" href="../DesarrolloWeb.html#dom">DOM</a>, la validación
+                        de
                         formularios, la creación de gráficos animados y la comunicación asíncrona con servidores a
                         través de AJAX. JavaScript se ejecuta en el navegador del usuario, lo que significa que puede
                         responder rápidamente a las acciones del usuario sin necesidad de recargar la página.
@@ -269,7 +281,7 @@
                             href="../nodejs/npm.html">nodejs</a>
                     </p>
                     <div class="text-center">
-                        <h3 class="mb-4">Como funciona react y se utiliza en el proyecto?</h3>
+                        <h3>Como funciona react y se utiliza en el proyecto?</h3>
                     </div>
                     <p class="lead text-justify">
                         Una vez ya sabiendo los fundamentos de JavaScript podemos empezar a utilizar react en nuestro
@@ -278,26 +290,31 @@
                     <p class="lead text-justify">
                         Una vez declarada nuestra conexion con supabase en react podemos exportar la conexion para poder
                         utilizar las funciones en cualquier sitio de nuestro proyecto. Entonces simplemente usamos
-                        <code class="lead">export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y ya tenemos la
+                        <code class="lead">export const supabase = createClient(supabaseUrl, supabaseAnonKey)</code> y
+                        ya tenemos la
                         variable supabase para importarla desde cuaqluier otro sitio para usarla
-                        <code class="lead">import { supabase } from "../supabase/client"</code> esto es la funcion principal de react
+                        <code class="lead">import { supabase } from "../supabase/client"</code> esto es la funcion
+                        principal de react
                         y se considera un "hook"
                     </p>
                     <p class="lead text-justify">
                         Tambien podemos utilizar estados de <code class="lead">input</code> y demas componentes para
                         controlarlos muy parecido a como hariamos en kotlin por ejemplo con
-                        <code class="lead">onChange={(e) => setEmail(e.target.value)}</code> podremos recoger el email del usuario
+                        <code class="lead">onChange={(e) => setEmail(e.target.value)}</code> podremos recoger el email
+                        del usuario
                         para autenticarlo
                     </p>
                     <p class="lead text-justify">
                         Otro apartado muy importante de react y que utilizamos en nuestro proyecto es la gestion de
                         rutas y roles para esto utilizamos la dependencia <a
                             href="https://www.npmjs.com/package/react-router-dom">react-router-dom</a> que podemos
-                        agregar con <code class="lead">npm install react-router-dom</code> y podremos gestionar las rutas y roles de
+                        agregar con <code class="lead">npm install react-router-dom</code> y podremos gestionar las
+                        rutas y roles de
                         nuestra aplicacion, asi que en nuestra App.js que es como el main de nuestra aplicacion
                         agregaremos las rutas y en ella indicaremos las paginas que tenemos declarada en nuestra
                         carpeta/paquete para ser redireccionadas y la aplicacion sepa que pagina mostrar en funcion de
-                        la url. Tambien en la App.js con <code class="lead">navigate</code> (que es otra funcion de esta libreria)
+                        la url. Tambien en la App.js con <code class="lead">navigate</code> (que es otra funcion de esta
+                        libreria)
                         podremos navegar entre las rutas y asi en el caso de que el usuario no este autenticado
                         hacer que vaya una ruta especifica de esta forma no podra salir de hay hasta que no se
                         autentifique, de esta forma podemos hacer al gestion de roles de nuestra aplicacion.
@@ -306,7 +323,8 @@
                         A continuacion se ofrece el proyecto en github para poder acceder al codigo completo
                     </p>
                     <div class="text-center">
-                        <a class="lead" href="https://github.com/Anthonyx82/Anthonyx82.github.io/tree/main/SupabaseReactProyect"
+                        <a class="lead"
+                            href="https://github.com/Anthonyx82/Anthonyx82.github.io/tree/main/SupabaseReactProyect"
                             class="btn custom-btn custom-btn-bg custom-btn-link">PROYECTO</a>
                     </div>
                 </div>

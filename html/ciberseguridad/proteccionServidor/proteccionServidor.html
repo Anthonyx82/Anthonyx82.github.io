@@ -9,27 +9,28 @@
 
     <title>Antonio Martin Sosa</title>
 
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/unicons.css">
-    <link rel="stylesheet" href="../../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/unicons.css">
+    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
 
     <!-- FAVICON -->
-    <link rel="icon" href="../../images/Yo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
 
     <!-- MAIN STYLE -->
-    <link rel="stylesheet" href="../../css/tooplate-style.css">
+    <link rel="stylesheet" href="../../../css/tooplate-style.css">
 </head>
 
 <body>
 
     <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light" role="navigation" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand" href="../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+            <a class="navbar-brand" href="../../../index.html" aria-label="Inicio - Antonio Martin"><i
+                    class='uil uil-user'></i>Antonio Martin</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -38,25 +39,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="../../index.html#about" class="nav-link"><span data-hover="About">Sobre Mi</span></a>
+                        <a href="../../../index.html#about" class="nav-link" aria-label="Sobre Mi"><span
+                                data-hover="About">Sobre Mi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index.html#project" class="nav-link"><span
+                        <a href="../../../index.html#project" class="nav-link" aria-label="Proyectos"><span
                                 data-hover="Projects">Proyectos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index.html#resume" class="nav-link"><span data-hover="Resume">Resumen</span></a>
+                        <a href="../../../index.html#resume" class="nav-link" aria-label="Resumen"><span
+                                data-hover="Resume">Resumen</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index.html#contact" class="nav-link"><span
+                        <a href="../../../index.html#contact" class="nav-link" aria-label="Contactar"><span
                                 data-hover="Contact">Contactar</span></a>
                     </li>
                 </ul>
 
                 <ul class="lead navbar-nav">
-                    <div class="color-mode">
-                        <i class="color-mode-icon"></i>
-                    </div>
+                    <li>
+                        <button class="color-mode" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                            <i class="color-mode-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -78,7 +83,7 @@
                     </p>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Traefik: Seguridad desde el Proxy Inverso</h3>
+                        <h3>Traefik: Seguridad desde el Proxy Inverso</h3>
                     </div>
                     <p class="lead text-justify">
                         Traefik no solo gestiona el tráfico hacia los servicios, también permite aplicar políticas de
@@ -97,7 +102,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Accesos SSH: Seguridad de Bajo Nivel</h3>
+                        <h3>Accesos SSH: Seguridad de Bajo Nivel</h3>
                     </div>
                     <p class="lead text-justify">
                         El acceso SSH es la puerta de entrada al servidor. Para evitar accesos no autorizados, es
@@ -114,7 +119,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Fail2Ban: Defensa contra Fuerza Bruta</h3>
+                        <h3>Fail2Ban: Defensa contra Fuerza Bruta</h3>
                     </div>
                     <p class="lead text-justify">
                         Fail2Ban es una herramienta que monitoriza los registros del sistema para detectar intentos de
@@ -130,7 +135,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Buenas Prácticas con Docker y Docker Compose</h3>
+                        <h3>Buenas Prácticas con Docker y Docker Compose</h3>
                     </div>
                     <p class="lead text-justify">
                         La seguridad de los contenedores no debe dejarse de lado. Asegúrate de aplicar buenas prácticas
@@ -150,7 +155,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Mantenimiento Automatizado del Servidor</h3>
+                        <h3>Mantenimiento Automatizado del Servidor</h3>
                     </div>
                     <p class="lead text-justify">
                         Además de proteger el entorno, es recomendable automatizar tareas de mantenimiento que aseguren
@@ -160,7 +165,8 @@
                     </p>
                     <ul class="lead text-justify">
                         <li>- Reinicia de forma controlada varios servicios gestionados con Docker Compose, aplicando
-                            <code>--build</code> donde es necesario.</li>
+                            <code>--build</code> donde es necesario.
+                        </li>
                         <li>- Limpia recursos inactivos de Docker: contenedores detenidos, imágenes sin uso, redes no
                             utilizadas y volúmenes huérfanos.</li>
                         <li>- Ejecuta una limpieza del sistema operativo Debian: eliminación de paquetes huérfanos,
@@ -176,7 +182,7 @@
                     </p>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Otros Consejos y Herramientas de Protección</h3>
+                        <h3>Otros Consejos y Herramientas de Protección</h3>
                     </div>
                     <p class="lead text-justify">
                         Además de los aspectos anteriores, considera los siguientes puntos para mejorar aún más la
@@ -184,7 +190,11 @@
                     </p>
                     <ul class="lead text-justify">
                         <li>- Implementar <strong>copias de seguridad automáticas</strong> de tus volúmenes y
-                            configuraciones.</li>
+                            configuraciones. Desde <a class="lead" href="copiaSeguridad.html" target="_blank">este
+                                enlace</a> podras ver mas
+                            informacion sobre como
+                            realizar una copia
+                            de seguridad de un entorno docker</li>
                         <li>- Utilizar <strong>firewalls como UFW</strong> para controlar qué puertos están abiertos.
                         </li>
                         <li>- Activar alertas en tus herramientas de monitorización (Prometheus, Uptime Kuma) para
@@ -195,7 +205,7 @@
                     </ul>
 
                     <div class="text-center">
-                        <h3 class="mb-4">Resumen</h3>
+                        <h3>Resumen</h3>
                     </div>
                     <p class="lead text-justify">
                         La seguridad no es un componente opcional, sino una base sobre la cual se debe construir toda
@@ -223,14 +233,14 @@
         </div>
     </footer>
 
-    <script src="../../js/jquery-3.3.1.min.js"></script>
-    <script src="../../js/popper.min.js"></script>
-    <script src="../../js/bootstrap.min.js"></script>
-    <script src="../../js/Headroom.js"></script>
-    <script src="../../js/jQuery.headroom.js"></script>
-    <script src="../../js/owl.carousel.min.js"></script>
-    <script src="../../js/smoothscroll.js"></script>
-    <script src="../../js/custom.js"></script>
+    <script src="../../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../../js/popper.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/Headroom.js"></script>
+    <script src="../../../js/jQuery.headroom.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/smoothscroll.js"></script>
+    <script src="../../../js/custom.js"></script>
 
 </body>
 

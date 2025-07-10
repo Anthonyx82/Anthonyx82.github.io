@@ -24,12 +24,13 @@
 <body>
 
     <!-- MENU -->
-    <nav class="navbar navbar-expand-sm navbar-light">
+    <nav class="navbar navbar-expand-sm navbar-light" role="navigation" aria-label="Menú principal">
         <div class="container">
-            <a class="navbar-brand" href="../../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+            <a class="navbar-brand" href="../../../index.html" aria-label="Inicio - Antonio Martin"><i
+                    class='uil uil-user'></i>Antonio Martin</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -38,27 +39,29 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="lead navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a href="../../../index.html#about" class="nav-link"><span data-hover="About">Sobre
-                                Mi</span></a>
+                        <a href="../../../index.html#about" class="nav-link" aria-label="Sobre Mi"><span
+                                data-hover="About">Sobre Mi</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#project" class="nav-link"><span
+                        <a href="../../../index.html#project" class="nav-link" aria-label="Proyectos"><span
                                 data-hover="Projects">Proyectos</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#resume" class="nav-link"><span
+                        <a href="../../../index.html#resume" class="nav-link" aria-label="Resumen"><span
                                 data-hover="Resume">Resumen</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="../../../index.html#contact" class="nav-link"><span
+                        <a href="../../../index.html#contact" class="nav-link" aria-label="Contactar"><span
                                 data-hover="Contact">Contactar</span></a>
                     </li>
                 </ul>
 
                 <ul class="lead navbar-nav">
-                    <div class="color-mode">
-                        <i class="color-mode-icon"></i>
-                    </div>
+                    <li>
+                        <button class="color-mode" aria-label="Cambiar modo de color" title="Cambiar modo de color">
+                            <i class="color-mode-icon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -74,7 +77,8 @@
                     </div>
                     <p class="lead text-justify">
 
-                        <a class="lead" href="https://supabase.com/" target="_blank" rel="noopener noreferrer">Supabase</a> es una
+                        <a class="lead" href="https://supabase.com/" target="_blank"
+                            rel="noopener noreferrer">Supabase</a> es una
                         plataforma de código abierto que ofrece una solución integral para el desarrollo
                         de aplicaciones web y móviles, proporcionando una base de datos <a
                             href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">PostgreSQL</a>
@@ -94,8 +98,10 @@
                         <h2 class="mb-4">React</h2>
                     </div>
                     <p class="lead text-justify">
-                        <a class="lead" href="https://es.reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> es una
-                        biblioteca de <a class="lead" href="proyectoPasoaPaso.html#javascript">JavaScript</a> de código abierto
+                        <a class="lead" href="https://es.reactjs.org/" target="_blank"
+                            rel="noopener noreferrer">React</a> es una
+                        biblioteca de <a class="lead" href="proyectoPasoaPaso.html#javascript">JavaScript</a> de código
+                        abierto
                         utilizada para construir
                         interfaces de usuario (UI) interactivas y eficientes para aplicaciones web y móviles.
                         Desarrollado por <a class="lead" href="https://www.facebook.com/" target="_blank"
@@ -116,8 +122,9 @@
                         mismos o desde la pagina web oficial dependiendo de los servidores de supabase, en mi caso lo
                         autohosteare pero si tu no quieres hacerlo el proceso es el mismo solo que nos ahorramos esta
                         parte.
-                        Si te interesa saber como autohostearlo aqui te dejo <a class="lead" href="selfhostingSupabase.html"
-                            target="_blank" rel="noopener noreferrer"> mas informacion </a>
+                        Si te interesa saber como autohostearlo aqui te dejo <a class="lead"
+                            href="selfhostingSupabase.html" target="_blank" rel="noopener noreferrer"> mas informacion
+                        </a>
                     </p>
                     <p class="lead text-justify">
                         A continuacion vamos a explicar como realizar el setup de nuestro proyecto con react y supabase.
@@ -210,8 +217,9 @@
                     </div>
                     </p>
                     <p class="lead text-justify">
-                        <strong>Paso 9: </strong> Añadiremos la <a class="lead" href="https://github.com/supabase/supabase-js"
-                            target="_blank" rel="noopener noreferrer">libreria de supabase</a> a nuestro proyecto
+                        <strong>Paso 9: </strong> Añadiremos la <a class="lead"
+                            href="https://github.com/supabase/supabase-js" target="_blank"
+                            rel="noopener noreferrer">libreria de supabase</a> a nuestro proyecto
                     <div class="text-center">
                         <img src="../../../images/project/supabseReact/10.png" alt="Captura de pantalla paso 10"
                             style="max-width: 100%; height: auto; display: inline-block;">
