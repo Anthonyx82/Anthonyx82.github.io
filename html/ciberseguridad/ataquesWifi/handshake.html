@@ -2,92 +2,81 @@
 <html lang="es">
 
 <head>
+    <!-- Meta básicos -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Viewport para móviles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Meta Description -->
-    <meta name="description" content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2.">
-
-    <!-- Autor -->
-    <meta name="author" content="Antonio Martín Sosa">
-
-    <!-- Keywords (aunque Google ya no las usa mucho, no está de más) -->
-    <meta name="keywords"
-        content="handshake, Wi-Fi, WPA, WPA2, redes inalámbricas, seguridad informática, ciberseguridad">
-
-    <!-- Canonical URL para evitar duplicados -->
-    <link rel="canonical" href="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
-
-    <!-- Título -->
     <title>¿Qué es el Handshake? | Antonio Martín Sosa</title>
+
+    <!-- Meta SEO -->
+    <meta name="description"
+        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica.">
+    <meta name="keywords"
+        content="handshake, Wi-Fi, WPA, WPA2, redes inalámbricas, seguridad informática, ciberseguridad, autenticación Wi-Fi">
+    <meta name="author" content="Antonio Martín Sosa">
+    <link rel="canonical" href="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html">
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="¿Qué es el Handshake? | Antonio Martín Sosa">
+    <meta property="og:description"
+        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html">
+    <meta property="og:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp">
+    <meta property="og:site_name" content="Antonio Martín Sosa">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¿Qué es el Handshake? | Antonio Martín Sosa">
+    <meta name="twitter:description" content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2.">
+    <meta name="twitter:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp">
+    <meta name="twitter:site" content="@Anthonyx82_ttv">
+    <meta name="twitter:creator" content="@Anthonyx82_ttv">
 
     <!-- Favicon -->
     <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
 
-    <!-- Open Graph para redes sociales -->
-    <meta property="og:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
-    <meta property="og:description"
-        content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2." />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
-    <meta property="og:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
-    <meta property="og:site_name" content="Antonio Martín Sosa" />
-    <meta property="og:locale" content="es_ES" />
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
-    <meta name="twitter:description"
-        content="Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2." />
-    <meta name="twitter:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
-    <meta name="twitter:site" content="@Anthonyx82_ttv" />
-    <meta name="twitter:creator" content="@Anthonyx82_ttv" />
-
-    <!-- Robots -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-
-    <!-- Schema.org (JSON-LD) para artículo -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "¿Qué es el Handshake?",
-      "description": "Explicación detallada sobre el proceso de handshake en redes Wi-Fi con WPA/WPA2.",
-      "author": {
-        "@type": "Person",
-        "name": "Antonio Martín Sosa"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Antonio Martín Sosa",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.tudominio.com/images/logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.tudominio.com/handshake-wifi"
-      },
-      "datePublished": "2025-07-10",
-      "dateModified": "2025-07-10",
-      "image": "https://www.tudominio.com/images/handshake-preview.jpg"
-    }
-    </script>
-
-    <!-- Preload fonts o recursos críticos si tienes -->
-    <!-- Ejemplo: <link rel="preload" href="path/font.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
-
-    <!-- Enlaces CSS -->
+    <!-- Estilos -->
     <link rel="stylesheet" href="../../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../css/unicons.css">
     <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
     <link rel="stylesheet" href="../../../css/tooplate-style.css">
 
+    <!-- Datos estructurados (JSON-LD / Schema.org) -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "headline": "¿Qué es el Handshake?",
+          "description": "Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica.",
+          "author": {
+            "@type": "Person",
+            "name": "Antonio Martín Sosa"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Antonio Martín Sosa",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://anthonyx82.github.io/images/Yo/favicon.ico"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html"
+          },
+          "datePublished": "2025-07-10",
+          "dateModified": "2025-07-10",
+          "image": "https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp",
+          "inLanguage": "es"
+        }
+    </script>
 </head>
 
 <body>
@@ -174,12 +163,14 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class="footer py-5 bg-light" role="contentinfo">
+    <footer class=" footer py-5" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
-                    <p class="text-center text-muted">Currículum diseñado y producido por Antonio Martín Sosa &copy;
-                        2025</p>
+                    <p class="copyright-text text-center">Curriculum diseñado y producido por
+                        Antonio Martin Sosa
+                        2025
+                    </p>
                 </div>
             </div>
         </div>
