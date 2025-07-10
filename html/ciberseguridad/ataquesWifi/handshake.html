@@ -42,20 +42,28 @@
     <!-- Favicon -->
     <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon" />
 
-    <!-- Preconnect para Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Preconnect para Google Fonts y fuentes externas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://anthonyx82.github.io" crossorigin />
 
-    <!-- Preload CSS críticos -->
+    <!-- Preload fuentes web -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/mavenpro/v39/7Au9p_AqnyWWAxW2Wk3GzWQIElsO0w.woff2" as="font"
+        type="font/woff2" crossorigin />
+    <link rel="preload" href="https://anthonyx82.github.io/font/unicons.woff2?42479262" as="font" type="font/woff2"
+        crossorigin />
+
+    <!-- Preload y carga diferida CSS -->
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" as="style"
-        onload="this.rel='stylesheet'">
+        onload="this.rel='stylesheet'" />
     <link rel="preload" href="../../../css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="../../../css/unicons.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="../../../css/owl.carousel.min.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="../../../css/owl.theme.default.min.css" as="style" onload="this.rel='stylesheet'" />
     <link rel="preload" href="../../../css/tooplate-style.css" as="style" onload="this.rel='stylesheet'" />
+
     <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" />
         <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
         <link rel="stylesheet" href="../../../css/unicons.css" />
         <link rel="stylesheet" href="../../../css/owl.carousel.min.css" />
