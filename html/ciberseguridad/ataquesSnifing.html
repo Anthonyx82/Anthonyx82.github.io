@@ -18,6 +18,7 @@
     <link rel="icon" href="../../images/Yo/favicon.ico" type="image/x-icon">
 
     <!-- MAIN STYLE -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../../css/tooplate-style.css">
 </head>
 
@@ -72,59 +73,74 @@
                     </div>
                     <p class="lead text-justify">
                         El sniffing es una técnica utilizada para capturar y analizar paquetes de datos que se
-                        transmiten en una red. Se emplea comúnmente en pruebas de seguridad, administración de redes y, en algunos casos, con
-                        fines no éticos. En el ámbito de los videojuegos en línea como GTA5 Online, el sniffing puede ser usado para
+                        transmiten en una red. Se emplea comúnmente en pruebas de seguridad, administración de redes y,
+                        en algunos casos, con
+                        fines no éticos. En el ámbito de los videojuegos en línea como GTA5 Online, el sniffing puede
+                        ser usado para
                         rastrear sesiones, identificar jugadores y analizar datos del tráfico de red del juego.
                     </p>
-                    
+
                     <h3>Vulnerabilidades en la red de GTA5 Online</h3>
                     <p class="lead text-justify">
-                        GTA5 Online utiliza una arquitectura peer-to-peer (P2P) para gestionar sus sesiones multijugador. 
-                        En este sistema, en lugar de que toda la comunicación pase por servidores dedicados, los jugadores 
-                        se conectan directamente entre sí para reducir la latencia. Sin embargo, esta implementación presenta una vulnerabilidad 
-                        significativa: las direcciones IP de los jugadores quedan expuestas dentro de la sesión. 
-                        Cualquier usuario con las herramientas adecuadas puede capturar paquetes de red y obtener información sobre los jugadores conectados, 
+                        GTA5 Online utiliza una arquitectura peer-to-peer (P2P) para gestionar sus sesiones
+                        multijugador.
+                        En este sistema, en lugar de que toda la comunicación pase por servidores dedicados, los
+                        jugadores
+                        se conectan directamente entre sí para reducir la latencia. Sin embargo, esta implementación
+                        presenta una vulnerabilidad
+                        significativa: las direcciones IP de los jugadores quedan expuestas dentro de la sesión.
+                        Cualquier usuario con las herramientas adecuadas puede capturar paquetes de red y obtener
+                        información sobre los jugadores conectados,
                         incluyendo su dirección IP, ping y datos de conexión.
                     </p>
-                    
+
                     <h3>Herramientas utilizadas en el Sniffing</h3>
                     <p class="lead text-justify">
                         Existen diversas herramientas utilizadas para el sniffing, algunas de las más conocidas son:
                     </p>
                     <ul class="lead">
                         <li><strong>Wireshark:</strong> Un analizador de protocolos que permite capturar y examinar el
-                            tráfico de red en tiempo real. Con él, se pueden filtrar los paquetes de GTA5 y extraer información clave sobre las conexiones activas.</li>
+                            tráfico de red en tiempo real. Con él, se pueden filtrar los paquetes de GTA5 y extraer
+                            información clave sobre las conexiones activas.</li>
                         <li><strong>Npcap:</strong> Un driver que permite a herramientas como Wireshark capturar
-                            paquetes de red. Es esencial para monitorizar las conexiones en modo promiscuo y detectar los paquetes de datos enviados por los jugadores.</li>
+                            paquetes de red. Es esencial para monitorizar las conexiones en modo promiscuo y detectar
+                            los paquetes de datos enviados por los jugadores.</li>
                         <li><strong>Session-Sniffer:</strong> Un programa desarrollado en GitHub específicamente para
-                            capturar sesiones en GTA5 Online. Automatiza la identificación de direcciones IP en una sesión multijugador.</li>
+                            capturar sesiones en GTA5 Online. Automatiza la identificación de direcciones IP en una
+                            sesión multijugador.</li>
                     </ul>
-                    
+
                     <h3>Cómo funciona Session-Sniffer</h3>
                     <p class="lead text-justify">
-                        Session-Sniffer aprovecha la falta de cifrado en la comunicación P2P de GTA5 Online. 
-                        Para ello, utiliza <strong>Npcap</strong> para capturar los paquetes de red en tiempo real y luego filtra aquellos relacionados con el tráfico del juego. 
-                        A través del análisis de los paquetes UDP enviados por los jugadores, el programa es capaz de extraer direcciones IP junto con otros datos como ping y puerto de conexión.
+                        Session-Sniffer aprovecha la falta de cifrado en la comunicación P2P de GTA5 Online.
+                        Para ello, utiliza <strong>Npcap</strong> para capturar los paquetes de red en tiempo real y
+                        luego filtra aquellos relacionados con el tráfico del juego.
+                        A través del análisis de los paquetes UDP enviados por los jugadores, el programa es capaz de
+                        extraer direcciones IP junto con otros datos como ping y puerto de conexión.
                     </p>
                     <p class="lead text-justify">
-                        Mientras que Wireshark requiere que el usuario analice manualmente los paquetes capturados, 
-                        Session-Sniffer automatiza este proceso, detectando y mostrando directamente la información relevante en su interfaz. 
+                        Mientras que Wireshark requiere que el usuario analice manualmente los paquetes capturados,
+                        Session-Sniffer automatiza este proceso, detectando y mostrando directamente la información
+                        relevante en su interfaz.
                         Esto permite identificar jugadores en una sesión de manera rápida y efectiva.
                     </p>
-                    
+
                     <h3>Mi contribución al proyecto Session-Sniffer</h3>
                     <p class="lead text-justify">
-                        He contribuido al desarrollo y mejora de <a class="lead" href="https://github.com/BUZZARDGTA/Session-Sniffer"
-                            target="_blank">Session-Sniffer</a>,
-                        solucionando fallos del programa y optimizando su rendimiento. Gracias a estas mejoras, el software ahora captura direcciones IP con mayor precisión, 
-                        reduciendo errores en la detección y mejorando su compatibilidad con distintas configuraciones de red.
+                        He contribuido al desarrollo y mejora de <a class="lead"
+                            href="https://github.com/BUZZARDGTA/Session-Sniffer" target="_blank">Session-Sniffer</a>,
+                        solucionando fallos del programa y optimizando su rendimiento. Gracias a estas mejoras, el
+                        software ahora captura direcciones IP con mayor precisión,
+                        reduciendo errores en la detección y mejorando su compatibilidad con distintas configuraciones
+                        de red.
                     </p>
-                    
+
                     <h3>Ejemplo del programa en funcionamiento</h3>
                     <div class="text-center">
-                        <img src="../../images/project/sniffing/ejecucion-sniffer.png" alt="Session-Sniffer en funcionamiento" class="img-fluid">
+                        <img src="../../images/project/sniffing/ejecucion-sniffer.png"
+                            alt="Session-Sniffer en funcionamiento" class="img-fluid">
                         <p class="lead mt-2"><em>Captura del programa mostrando una sesión en GTA5 Online.</em></p>
-                    </div>                    
+                    </div>
                 </div>
             </div>
         </div>
