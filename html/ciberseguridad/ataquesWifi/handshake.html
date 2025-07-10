@@ -3,50 +3,62 @@
 
 <head>
     <!-- Meta básicos -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>¿Qué es el Handshake? | Antonio Martín Sosa</title>
 
     <!-- Meta SEO -->
     <meta name="description"
-        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica.">
+        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica." />
     <meta name="keywords"
-        content="handshake, Wi-Fi, WPA, WPA2, redes inalámbricas, seguridad informática, ciberseguridad, autenticación Wi-Fi">
-    <meta name="author" content="Antonio Martín Sosa">
-    <link rel="canonical" href="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html">
+        content="handshake, Wi-Fi, WPA, WPA2, redes inalámbricas, seguridad informática, ciberseguridad, autenticación Wi-Fi" />
+    <meta name="author" content="Antonio Martín Sosa" />
+    <link rel="canonical" href="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
 
     <!-- Robots -->
-    <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="¿Qué es el Handshake? | Antonio Martín Sosa">
+    <meta property="og:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
     <meta property="og:description"
-        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html">
-    <meta property="og:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp">
-    <meta property="og:site_name" content="Antonio Martín Sosa">
-    <meta property="og:locale" content="es_ES">
+        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2, esencial para comprender cómo funciona la autenticación inalámbrica." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://anthonyx82.github.io/html/ciberseguridad/ataquesWifi/handshake.html" />
+    <meta property="og:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
+    <meta property="og:site_name" content="Antonio Martín Sosa" />
+    <meta property="og:locale" content="es_ES" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="¿Qué es el Handshake? | Antonio Martín Sosa">
-    <meta name="twitter:description" content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2.">
-    <meta name="twitter:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp">
-    <meta name="twitter:site" content="@Anthonyx82_ttv">
-    <meta name="twitter:creator" content="@Anthonyx82_ttv">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="¿Qué es el Handshake? | Antonio Martín Sosa" />
+    <meta name="twitter:description"
+        content="Explicación clara del proceso de handshake en redes Wi-Fi con WPA/WPA2." />
+    <meta name="twitter:image" content="https://anthonyx82.github.io/images/project/wifi/miniaturaHandshake.webp" />
+    <meta name="twitter:site" content="@Anthonyx82_ttv" />
+    <meta name="twitter:creator" content="@Anthonyx82_ttv" />
 
     <!-- Favicon -->
-    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../../images/Yo/favicon.ico" type="image/x-icon" />
 
-    <!-- Estilos -->
-    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../css/unicons.css">
-    <link rel="stylesheet" href="../../../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../../../css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="../../../css/tooplate-style.css">
+    <!-- Preconnect para Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload CSS críticos -->
+    <link rel="preload" href="../../../css/bootstrap.min.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../../../css/unicons.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../../../css/owl.carousel.min.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../../../css/owl.theme.default.min.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="../../../css/tooplate-style.css" as="style" onload="this.rel='stylesheet'" />
+    <noscript>
+        <link rel="stylesheet" href="../../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../../css/unicons.css" />
+        <link rel="stylesheet" href="../../../css/owl.carousel.min.css" />
+        <link rel="stylesheet" href="../../../css/owl.theme.default.min.css" />
+        <link rel="stylesheet" href="../../../css/tooplate-style.css" />
+    </noscript>
 
     <!-- Datos estructurados (JSON-LD / Schema.org) -->
     <script type="application/ld+json">
@@ -163,7 +175,7 @@
     </main>
 
     <!-- PIE DE PÁGINA -->
-    <footer class=" footer py-5" role="contentinfo">
+    <footer class="footer py-5" role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
@@ -177,14 +189,14 @@
     </footer>
 
     <!-- SCRIPTS -->
-    <script src="../../../js/jquery-3.3.1.min.js"></script>
-    <script src="../../../js/popper.min.js"></script>
-    <script src="../../../js/bootstrap.min.js"></script>
-    <script src="../../../js/Headroom.js"></script>
-    <script src="../../../js/jQuery.headroom.js"></script>
-    <script src="../../../js/owl.carousel.min.js"></script>
-    <script src="../../../js/smoothscroll.js"></script>
-    <script src="../../../js/custom.js"></script>
+    <script src="../../../js/jquery-3.3.1.min.js" defer></script>
+    <script src="../../../js/popper.min.js" defer></script>
+    <script src="../../../js/bootstrap.min.js" defer></script>
+    <script src="../../../js/Headroom.js" defer></script>
+    <script src="../../../js/jQuery.headroom.js" defer></script>
+    <script src="../../../js/owl.carousel.min.js" defer></script>
+    <script src="../../../js/smoothscroll.js" defer></script>
+    <script src="../../../js/custom.js" defer></script>
 
 </body>
 
