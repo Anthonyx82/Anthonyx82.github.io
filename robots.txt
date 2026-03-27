@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://anthonyx82.github.io/sitemap.xml
+Sitemap: https://blog.web82.es/sitemap.xml
