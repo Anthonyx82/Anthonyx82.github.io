@@ -6,112 +6,112 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://blog.web82.es/</loc>
+  <loc>https://www.web82.es/</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/index.html</loc>
+  <loc>https://www.web82.es/index.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/proyectosCiberseguridad.html</loc>
+  <loc>https://www.web82.es/html/proyectosCiberseguridad.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/proyectosHardware.html</loc>
+  <loc>https://www.web82.es/html/proyectosHardware.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/proyectosProgramacion.html</loc>
+  <loc>https://www.web82.es/html/proyectosProgramacion.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/proyectosSysAdmin.html</loc>
+  <loc>https://www.web82.es/html/proyectosSysAdmin.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/ataquesDDOS.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/ataquesDDOS.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/ataquesTroyanos.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/ataquesTroyanos.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/ataquesWifi/ataquesWifi.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/ataquesWifi/ataquesWifi.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/otrosProyectos/proyectos.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/otrosProyectos/proyectos.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/hardware/componentes/componentes.html</loc>
+  <loc>https://www.web82.es/html/hardware/componentes/componentes.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/hardware/overclocking/overclocking.html</loc>
+  <loc>https://www.web82.es/html/hardware/overclocking/overclocking.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/DesarrolloWeb.html</loc>
+  <loc>https://www.web82.es/html/programacion/DesarrolloWeb.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/supabaseReact/supabaseReact.html</loc>
+  <loc>https://www.web82.es/html/programacion/supabaseReact/supabaseReact.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/nodejs/npm.html</loc>
+  <loc>https://www.web82.es/html/programacion/nodejs/npm.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/SysAdmin/SMTP&amp;DNS/smtp&amp;dns.html</loc>
+  <loc>https://www.web82.es/html/SysAdmin/SMTP&amp;DNS/smtp&amp;dns.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/ataquesWifi/handshake.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/ataquesWifi/handshake.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/ciberseguridad/otrosProyectos/maquinasCiberseguridad.html</loc>
+  <loc>https://www.web82.es/html/ciberseguridad/otrosProyectos/maquinasCiberseguridad.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/hardware/componentes/jeraquiaMemorias.html</loc>
+  <loc>https://www.web82.es/html/hardware/componentes/jeraquiaMemorias.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/supabaseReact/proyectoPasoaPaso.html</loc>
+  <loc>https://www.web82.es/html/programacion/supabaseReact/proyectoPasoaPaso.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/supabaseReact/selfhostingSupabase.html</loc>
+  <loc>https://www.web82.es/html/programacion/supabaseReact/selfhostingSupabase.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://blog.web82.es/html/programacion/nodejs/motorV8JS.html</loc>
+  <loc>https://www.web82.es/html/programacion/nodejs/motorV8JS.html</loc>
   <lastmod>2026-03-27T15:03:24+00:00</lastmod>
   <priority>0.51</priority>
 </url>
