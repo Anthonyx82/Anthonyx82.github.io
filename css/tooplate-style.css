@@ -118,7 +118,7 @@ strong {
 }
 
 .animated-item {
-  color: #ffc200;
+  color: #8a6508;
   font-size: 38px;
   line-height: inherit;
   display: block;
@@ -789,3 +789,9 @@ strong {
   align-items: center;
   justify-content: center;
 }
+
+
+/* Accesibilidad (contraste AA) - ajustes mínimos sin cambiar la identidad visual */
+.lead a, a.lead { color: #0062cc; }
+.contact-form .submit-btn { color: #212121; }
+.lead code, code.lead, .blog-content code, p code { color: #d6246f; }
