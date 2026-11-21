@@ -33,6 +33,17 @@
     nav: true
   });
 
+  // Accesibilidad del carrusel: nombres para botones de navegacion y puntos
+  function labelOwl() {
+    $('.owl-carousel .owl-prev').attr('aria-label', 'Proyecto anterior');
+    $('.owl-carousel .owl-next').attr('aria-label', 'Proyecto siguiente');
+    $('.owl-carousel .owl-dot').each(function (i) {
+      $(this).attr('aria-label', 'Ir al proyecto ' + (i + 1));
+    });
+  }
+  labelOwl();
+  $('.owl-carousel').on('changed.owl.carousel', labelOwl);
+
   // SMOOTHSCROLL
   $(function () {
     $('.nav-link, .custom-btn-link').on('click', function (event) {

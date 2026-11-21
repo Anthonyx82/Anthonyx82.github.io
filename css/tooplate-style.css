@@ -779,3 +779,13 @@ strong {
     font-size: 90%;
   }
 }
+
+
+/* Accesibilidad: area tactil de los puntos del carrusel (>=24px) sin cambiar su aspecto visible */
+.owl-theme .owl-dots .owl-dot {
+  min-width: 24px;
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
