@@ -795,3 +795,29 @@ strong {
 .lead a, a.lead { color: #0062cc; }
 .contact-form .submit-btn { color: #212121; }
 .lead code, code.lead, .blog-content code, p code { color: #d6246f; }
+
+/* Carrusel propio (sustituye Owl). Imita el aspecto anterior: imagen centrada, flechas laterales, puntos. */
+.c-carousel { position: relative; }
+.c-carousel .item img { max-width: 70%; max-height: 70%; margin: 1rem auto; display: block; }
+.c-carousel .c-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: none; border: 0; cursor: pointer; font-size: 80px; line-height: 1;
+  color: #212121; padding: 0 10px; transition: color .3s;
+}
+.c-carousel .c-nav:hover { color: #ffc200; }
+.c-carousel .c-prev { left: -10px; }
+.c-carousel .c-next { right: -10px; }
+.c-carousel .c-dots { text-align: center; margin-top: 10px; }
+.c-carousel .c-dot {
+  width: 10px; height: 10px; min-width: 24px; min-height: 24px; margin: 0 3px; padding: 0;
+  border: 0; border-radius: 50%; background: transparent; cursor: pointer; position: relative;
+}
+.c-carousel .c-dot:after {
+  content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 8px; height: 8px; border-radius: 50%; background: #d6d6d6;
+}
+.c-carousel .c-dot.active:after, .c-carousel .c-dot:hover:after { background: #5b5b5b; }
+.dark-mode .c-carousel .c-nav { color: #ffffff; }
+@media (max-width: 580px) { .c-carousel .c-nav { display: none; } }
+
+.owl-carousel{display:block;}
