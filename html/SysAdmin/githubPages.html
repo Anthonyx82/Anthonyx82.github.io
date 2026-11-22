@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cómo alojar gratis un CV web estático en GitHub Pages: sin servidor, con HTTPS, dominio propio y un rendimiento perfecto en SEO y PageSpeed.">
+    <meta name="author" content="Antonio Martin Sosa">
+
+    <title>GitHub Pages para tu CV estático | Antonio Martin Sosa</title>
+
+    <link rel="stylesheet" href="../../css/bootstrap.purged.css">
+    <link rel="stylesheet" href="../../css/unicons.css">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="../../images/Yo/favicon.ico" type="image/x-icon">
+
+    <!-- MAIN STYLE -->
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/tooplate-style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><i class='uil uil-user'></i>Antonio Martin</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="lead navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="../../index.html#about" class="nav-link"><span data-hover="About">Sobre Mi</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#project" class="nav-link"><span
+                                data-hover="Projects">Proyectos</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#resume" class="nav-link"><span data-hover="Resume">Resumen</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../index.html#contact" class="nav-link"><span
+                                data-hover="Contact">Contactar</span></a>
+                    </li>
+                </ul>
+
+                <ul class="lead navbar-nav">
+                    <div class="color-mode">
+                        <i class="color-mode-icon"></i>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  <main>
+
+    <!-- FEATURES -->
+    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-md-10 mx-auto">
+                    <div class="text-center">
+                        <h2 class="mb-4">GitHub Pages para tu CV estático</h2>
+                    </div>
+                    <p class="lead text-justify">
+                        <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+                        es un servicio <strong>gratuito</strong> que publica sitios web estáticos directamente desde un
+                        repositorio de GitHub. Para un currículum o un portfolio es la opción perfecta: no necesitas
+                        servidor, ni pagar hosting, ni mantener nada. Subes tu HTML, CSS y JavaScript, y GitHub se
+                        encarga de servirlo con <strong>HTTPS</strong>, dominio propio y una red de distribución (CDN)
+                        rápida en todo el mundo.
+                    </p>
+                    <p class="lead text-justify">
+                        Combinado con un <a href="../programacion/DesarrolloWeb.html#optimizacion">diseño estático
+                        optimizado a mano</a>, el resultado son páginas que cargan al instante y que puntúan al máximo
+                        en SEO y rendimiento, sin el peso de un framework.
+                    </p>
+
+                    <div class="text-center">
+                        <h3 id="porque">¿Por qué estático en GitHub Pages?</h3>
+                    </div>
+                    <ul class="lead text-justify">
+                        <li><strong>Gratis y sin servidor</strong>: nada de VPS, Docker ni mantenimiento. Cero coste.</li>
+                        <li><strong>Sin autohosting</strong>: no dependes de tu luz ni de tu conexión; lo sirve la
+                            infraestructura de GitHub.</li>
+                        <li><strong>HTTPS y dominio propio</strong>: certificado automático y soporte para tu dominio
+                            personalizado mediante un fichero <code>CNAME</code>.</li>
+                        <li><strong>Despliegue con <code>git push</code></strong>: cada cambio que subes se publica
+                            solo.</li>
+                        <li><strong>Rendimiento inmejorable</strong>: al ser archivos estáticos servidos por una CDN,
+                            la carga es casi instantánea.</li>
+                    </ul>
+
+                    <div class="text-center">
+                        <h3 id="pasos">Cómo publicarlo paso a paso</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        El proceso es muy sencillo. Para un sitio de usuario, el repositorio debe llamarse
+                        <code>tu-usuario.github.io</code>:
+                    </p>
+                    <ol class="lead text-justify">
+                        <li>Crea un repositorio público con el nombre <code>tu-usuario.github.io</code>.</li>
+                        <li>Sube tu web estática (al menos un <code>index.html</code>) a la rama <code>main</code>.</li>
+                        <li>En <strong>Settings → Pages</strong>, elige la rama <code>main</code> como origen.</li>
+                        <li>En un par de minutos tu web estará en <code>https://tu-usuario.github.io</code>.</li>
+                        <li>¿Dominio propio? Añade un fichero <code>CNAME</code> con tu dominio y crea el registro DNS
+                            correspondiente.</li>
+                    </ol>
+
+                    <div class="code-demo">
+                        <span class="code-demo-title">Ejemplo: subir tu web y publicarla</span>
+                        <pre><code># Clona tu repo y entra en él
+git clone https://github.com/tu-usuario/tu-usuario.github.io.git
+cd tu-usuario.github.io
+
+# Añade tu web estática (index.html, css/, js/, images/)
+# Para un dominio propio (opcional):
+echo "www.tudominio.com" &gt; CNAME
+
+git add .
+git commit -m "Mi CV web estático"
+git push origin main
+# Listo: GitHub Pages lo publica automáticamente</code></pre>
+                    </div>
+
+                    <div class="text-center">
+                        <h3 id="dominio">Dominio propio y HTTPS</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        Si quieres que tu CV se vea en <code>www.tudominio.com</code> en lugar de
+                        <code>usuario.github.io</code>, solo tienes que apuntar tu dominio a GitHub Pages:
+                    </p>
+                    <div class="code-demo">
+                        <span class="code-demo-title">DNS para dominio personalizado (ejemplo)</span>
+                        <pre><code># Un subdominio (www) con un registro CNAME:
+www    CNAME    tu-usuario.github.io
+
+# O el dominio raíz con registros A a las IPs de GitHub Pages:
+@      A        185.199.108.153
+@      A        185.199.109.153
+@      A        185.199.110.153
+@      A        185.199.111.153</code></pre>
+                    </div>
+                    <p class="lead text-justify">
+                        Después, en <strong>Settings → Pages</strong>, escribe tu dominio en <em>Custom domain</em> y
+                        activa <strong>Enforce HTTPS</strong>. GitHub emite el certificado automáticamente.
+                    </p>
+
+                    <div class="text-center">
+                        <h3 id="codigo">El código de este CV</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        Este mismo currículum es un sitio estático pensado para rendir al máximo. Puedes ver todo el
+                        código, tomarlo como base y adaptarlo en
+                        <a href="https://github.com/Anthonyx82/Anthonyx82.github.io" target="_blank" rel="noopener noreferrer">mi
+                        repositorio de GitHub</a>. Si te sirve de ayuda, deja una estrella ⭐: me ayuda mucho.
+                    </p>
+                    <p class="lead text-justify">
+                        Y si quieres entender las decisiones de diseño que hacen que estas páginas carguen tan rápido,
+                        pásate por <a href="../programacion/DesarrolloWeb.html#optimizacion">desarrollo web estático y
+                        optimización para SEO y PageSpeed</a>.
+                    </p>
+                </div>
+            </div>
+    </section>
+  </main>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-12">
+                    <p class="copyright-text text-center">Currículum diseñado y producido por Antonio Martin Sosa © 2025
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script defer src="../../js/app.js"></script>
+</body>
+
+</html>

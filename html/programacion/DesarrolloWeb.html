@@ -148,6 +148,48 @@
                         experiencias web interactivas y modernas, donde el contenido y la presentación pueden
                         actualizarse en tiempo real en respuesta a las acciones del usuario.
                     </p>
+
+                    <div class="text-center">
+                        <h3 id="optimizacion">Optimización para SEO y PageSpeed</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        Esta misma web es la mejor prueba de por qué un <strong>diseño estático hecho a mano</strong> es
+                        la opción ideal para un CV o un portfolio: alcanza puntuaciones de <strong>100 en SEO,
+                        accesibilidad y buenas prácticas</strong>, y un rendimiento muy alto en
+                        <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">PageSpeed
+                        Insights</a>. Un framework moderno (React, Angular, Next.js…) añade un <em>runtime</em> de
+                        JavaScript, hidratación y dependencias que casi nunca se aprovechan en una página de
+                        presentación, y que penalizan la carga en móvil. Hecho a mano solo envías lo imprescindible.
+                    </p>
+                    <p class="lead text-justify">
+                        Estas son las claves que apliqué en este proyecto para conseguir esos números:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li><strong>HTML semántico</strong>: un único <code>&lt;h1&gt;</code> por página,
+                            encabezados jerárquicos y una etiqueta <code>&lt;main&gt;</code> como punto de referencia.</li>
+                        <li><strong>Metadatos y SEO</strong>: <code>&lt;title&gt;</code> único y
+                            <code>&lt;meta name="description"&gt;</code> en cada página, <code>lang="es"</code>,
+                            <code>sitemap.xml</code> y <code>robots.txt</code>.</li>
+                        <li><strong>Cero JavaScript innecesario</strong>: nada de jQuery ni Bootstrap-JS; un único
+                            <code>app.js</code> propio (modo oscuro, menú, carrusel) de apenas unos KB.</li>
+                        <li><strong>CSS podado</strong>: solo las clases que se usan, servidas con
+                            <code>gzip</code> y cabeceras de caché largas.</li>
+                        <li><strong>Imágenes modernas</strong>: formato <code>.webp</code>, con
+                            <code>width</code>/<code>height</code> para evitar saltos de maquetación (CLS 0) y
+                            <code>loading="lazy"</code> en lo que no se ve al entrar.</li>
+                        <li><strong>Carga diferida de terceros</strong>: analítica y mapas embebidos se cargan
+                            después, para no bloquear el primer render.</li>
+                        <li><strong>Accesibilidad</strong>: contraste AA, <code>aria-label</code> en iconos y
+                            controles, y áreas táctiles suficientes.</li>
+                    </ul>
+                    <p class="lead text-justify">
+                        Si quieres alojar un CV estático gratis y sin servidor, he escrito una guía paso a paso en
+                        <a href="../SysAdmin/githubPages.html">GitHub Pages y diseño estático para tu CV</a>. Y si te
+                        resulta útil, el código completo de esta web está en
+                        <a href="https://github.com/Anthonyx82/Anthonyx82.github.io" target="_blank" rel="noopener noreferrer">mi
+                        repositorio de GitHub</a>: ¡una estrella ⭐ siempre se agradece!
+                    </p>
+
                 </div>
             </div>
     </section>

@@ -821,3 +821,83 @@ strong {
 @media (max-width: 580px) { .c-carousel .c-nav { display: none; } }
 
 .owl-carousel{display:block;}
+
+/* ============================================================
+   CONSISTENCIA VISUAL (2026-11-22)
+   Unifica el aspecto de enlaces de texto, negritas y código en
+   todo el contenido, independientemente de si el elemento lleva
+   .lead o no, para que no haya saltos de tamaño/color.
+   ============================================================ */
+
+/* Enlaces dentro del texto: mismo tamaño que el párrafo que los rodea
+   (antes .lead los hacía 1.25rem y "saltaban"). Color y peso uniformes. */
+p a,
+li a,
+.lead a,
+a.lead,
+.text-justify a {
+  font-size: inherit;
+  font-weight: 600;
+  color: #0062cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+p a:hover,
+li a:hover,
+.lead a:hover,
+a.lead:hover,
+.text-justify a:hover {
+  color: #ffc200 !important;
+  text-decoration: underline;
+}
+
+/* Negritas de contenido: siempre el mismo peso y color (texto normal en negrita) */
+p strong, li strong, .lead strong, p b, li b {
+  font-weight: 700;
+  color: inherit;
+}
+
+/* Código en línea: siempre el mismo estilo (monoespaciado + rosa accesible) */
+p code, li code, .lead code, code.lead, .blog-content code {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.9em;
+  color: #d6246f;
+  word-break: break-word;
+}
+
+/* En modo oscuro, enlaces y negritas legibles */
+.dark-mode p a, .dark-mode li a, .dark-mode .lead a, .dark-mode a.lead,
+.dark-mode .text-justify a { color: #5aa2ff; }
+.dark-mode p a:hover, .dark-mode li a:hover, .dark-mode .lead a:hover { color: #ffc200 !important; }
+.dark-mode p code, .dark-mode li code, .dark-mode .lead code { color: #ff79c6; }
+
+/* Bloques de código de ejemplo (demos en la propia página) */
+.code-demo {
+  background: #1e1e2e;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.code-demo-title {
+  display: block;
+  background: #2a2a3c;
+  color: #ffc200;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 16px;
+  letter-spacing: 0.3px;
+}
+.code-demo pre {
+  margin: 0;
+  padding: 16px;
+  overflow-x: auto;
+}
+.code-demo pre code {
+  font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e4e4e7;
+  background: none;
+  white-space: pre;
+}
