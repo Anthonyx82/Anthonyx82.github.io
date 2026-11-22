@@ -221,7 +221,7 @@
                     <ul class="lead text-justify">
                         <li><code class="lead">const { data, error } = await supabase.storage</code></li>
                         <li><code class="lead">.from("tasks")
-                            .upload(`task_images/${image.name}`, image);<br>
+                            .upload(<code class="lead">task_images/${image.name}</code>, image);<br>
                         taskData.image_url = data.path;</code></li>
                     </ul>
                     <br>

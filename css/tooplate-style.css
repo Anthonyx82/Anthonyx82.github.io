@@ -794,7 +794,6 @@ strong {
 /* Accesibilidad (contraste AA) - ajustes mínimos sin cambiar la identidad visual */
 .lead a, a.lead { color: #0062cc; }
 .contact-form .submit-btn { color: #212121; }
-.lead code, code.lead, .blog-content code, p code { color: #d6246f; }
 
 /* Carrusel propio (sustituye Owl). Imita el aspecto anterior: imagen centrada, flechas laterales, puntos. */
 .c-carousel { position: relative; }
@@ -836,7 +835,7 @@ li a,
 .lead a,
 a.lead,
 .text-justify a {
-  font-size: inherit;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #0062cc;
   text-decoration: none;
@@ -858,18 +857,22 @@ p strong, li strong, .lead strong, p b, li b {
 }
 
 /* Código en línea: siempre el mismo estilo (monoespaciado + rosa accesible) */
-p code, li code, .lead code, code.lead, .blog-content code {
+/* Código en línea con el mismo aspecto que el bloque .code-demo (chip oscuro redondeado) */
+p code, li code, .lead code, code.lead, .blog-content code, td code {
   font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-  font-size: 0.9em;
-  color: #d6246f;
-  word-break: break-word;
+  font-size: 0.85em;
+  background: #1e1e2e;
+  color: #ffc200;
+  padding: 2px 7px;
+  border-radius: 6px;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 /* En modo oscuro, enlaces y negritas legibles */
 .dark-mode p a, .dark-mode li a, .dark-mode .lead a, .dark-mode a.lead,
 .dark-mode .text-justify a { color: #5aa2ff; }
 .dark-mode p a:hover, .dark-mode li a:hover, .dark-mode .lead a:hover { color: #ffc200 !important; }
-.dark-mode p code, .dark-mode li code, .dark-mode .lead code { color: #ff79c6; }
 
 /* Bloques de código de ejemplo (demos en la propia página) */
 .code-demo {
