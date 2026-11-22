@@ -155,6 +155,60 @@ www    CNAME    tu-usuario.github.io
                     </p>
 
                     <div class="text-center">
+                        <h3 id="ha">Alta disponibilidad con GitHub Pages</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        Un sitio estático no tiene por qué depender de un solo origen. Puedes montar un esquema de
+                        <strong>alta disponibilidad (HA)</strong> combinando tu propio servidor con GitHub Pages como
+                        respaldo automático, de forma que la web <strong>siempre esté en línea</strong>:
+                    </p>
+                    <ul class="lead text-justify">
+                        <li><strong>Origen principal</strong>: tu servidor (por ejemplo, detrás de un proxy inverso
+                            como Traefik) sirve la web con su propio certificado.</li>
+                        <li><strong>Respaldo</strong>: el mismo sitio, publicado en GitHub Pages, listo en otra
+                            infraestructura totalmente independiente.</li>
+                        <li><strong>Conmutación automática</strong>: un pequeño vigilante comprueba cada minuto si tu
+                            servidor responde; si se cae, cambia por API el registro DNS para que
+                            <code>www</code> apunte a GitHub Pages, y lo revierte cuando tu servidor vuelve.</li>
+                        <li><strong>Despliegue único</strong>: con un <code>git push</code> actualizas los dos
+                            orígenes, así que nunca quedan desincronizados.</li>
+                    </ul>
+                    <p class="lead text-justify">
+                        El resultado: si falla tu luz, tu conexión o tu servidor, la web sigue sirviéndose desde
+                        GitHub Pages sin que nadie lo note. Lo mejor de ambos mundos: control propio cuando todo va
+                        bien, y la red global de GitHub como red de seguridad gratuita.
+                    </p>
+
+                    <div class="text-center">
+                        <h3 id="limitacion">La gran limitación (y por qué la culpa es de Google)</h3>
+                    </div>
+                    <p class="lead text-justify">
+                        GitHub Pages es casi perfecto para un CV estático, pero tiene una pega importante que descubrí
+                        y documenté en una
+                        <a href="https://github.com/orgs/community/discussions/149884" target="_blank" rel="noopener noreferrer">discusión
+                        pública que se hizo muy popular</a>: <strong>subir el sitemap a Google Search Console</strong>
+                        desde un dominio alojado en GitHub Pages es un calvario. Y el problema, seámos claros, <strong>no
+                        es de GitHub: es de Google</strong>.
+                    </p>
+                    <p class="lead text-justify">
+                        En GitHub Pages no controlas el servidor: no puedes añadir cabeceras HTTP, ni tocar la
+                        configuración, ni responder a los métodos de verificación que a Google se le antojan. Google
+                        Search Console, en lugar de aceptar algo tan estándar como un
+                        <code>sitemap.xml</code> servido por HTTPS, impone un proceso de verificación rígido y opaco
+                        que <strong>ignora por completo</strong> la realidad del hosting estático gratuito, que usan
+                        millones de desarrolladores. El resultado es absurdo: tienes una web perfecta, rápida y
+                        accesible, pero el propio buscador te pone trabas para indexarla bien.
+                    </p>
+                    <p class="lead text-justify">
+                        Es un ejemplo más de cómo <strong>Google prioriza su propio ecosistema</strong> por encima de
+                        los estándares abiertos de la web. Si usas sus servicios "a su manera" todo funciona; en cuanto
+                        sales de su jardín vallado, la experiencia se degrada a propósito. Una empresa con los recursos
+                        de Google podría soportar sin esfuerzo los casos de hosting estático como GitHub Pages; que no
+                        lo haga es una <strong>decisión, no una limitación técnica</strong>. La web abierta merece algo
+                        mejor.
+                    </p>
+
+                    <div class="text-center">
                         <h3 id="codigo">El código de este CV</h3>
                     </div>
                     <p class="lead text-justify">
